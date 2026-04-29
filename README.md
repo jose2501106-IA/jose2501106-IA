@@ -65,10 +65,10 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
 ## 🚀 En qué estoy trabajando
 
 ```yaml
-🥚 Casa Muñoz       → Pipeline de auditoría automatizada (Python + Apps Script)
-🚀 Systemic         → Startup de automatización con Industry 4.0 (Arduino + IoT)
-🤖 AI Assistant     → Stack agéntico (Claude Code + AWS + Lovable + Hostinger)
-🎓 Líderes Cient.   → Aplicación 2026 + 2 becas activas (Anahuac Universidad, Harvard University en Aspire Leaders Program)
+🥚 Central de Abastos       → Pipeline de auditoría automatizada (Python + Apps Script)
+🚀 Entrepreneurship         → Startup de automatización con Industry 4.0 (Arduino + IoT)
+🤖 AI Assistant             → Stack agéntico (Claude Code + AWS + Lovable + Hostinger)
+🎓 Líderes Cient.           → Aplicación 2026 + 2 becas activas (Anahuac Universidad, Harvard University en Aspire Leaders Program)
 ```
 
 ---
