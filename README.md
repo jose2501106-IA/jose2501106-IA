@@ -180,36 +180,62 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
 <!-- 🎯 CURRENTLY LEARNING -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
-## 🎯 Currently learning
+## 🎯 En formación activa
+
+> *Certificaciones y cursos en progreso. Las muevo a "Certificaciones" cuando estén completadas.*
 
 <table>
   <tr>
-    <td>🤖</td>
-    <td><b>AI Engineering</b></td>
+    <th>Programa</th>
+    <th>Institución</th>
+    <th>Estado</th>
+    <th>Foco</th>
+  </tr>
+  <tr>
+    <td>📊 <b>Lean Six Sigma</b></td>
+    <td>The Council for Six Sigma Certification</td>
+    <td><img src="https://img.shields.io/badge/En%20curso-Lean%20Management-F59E0B?style=flat-square"/></td>
+    <td>Optimización de procesos, kaizen, value stream mapping</td>
+  </tr>
+  <tr>
+    <td>🌐 <b>Cisco Networking Basics</b></td>
+    <td>Cisco Networking Academy</td>
+    <td><img src="https://img.shields.io/badge/En%20curso-Networking-1BA0D7?style=flat-square"/></td>
+    <td>TCP/IP, routing, switching, fundamentos de red</td>
+  </tr>
+  <tr>
+    <td>☕ <b>Java + OCI Foundations</b></td>
+    <td>Oracle ONE / Alura Latam</td>
+    <td><img src="https://img.shields.io/badge/En%20curso-Cloud%20%26%20OOP-F80000?style=flat-square"/></td>
+    <td>Java fundamentals + Oracle Cloud Infrastructure</td>
+  </tr>
+  <tr>
+    <td>🎓 <b>AI Engineering</b></td>
+    <td>Hybridge Education</td>
+    <td><img src="https://img.shields.io/badge/3er%20cuatrimestre-3%2F8-58A6FF?style=flat-square"/></td>
     <td>Agentes, RAG, integraciones API, pipelines de datos</td>
   </tr>
   <tr>
-    <td>☁️</td>
-    <td><b>Cloud architectures</b></td>
-    <td>AWS, Docker, CI/CD, infraestructura como código</td>
+    <td>🏭 <b>Ingeniería Industrial</b></td>
+    <td>UVEG</td>
+    <td><img src="https://img.shields.io/badge/En%20curso-Doble%20titulaci%C3%B3n-10B981?style=flat-square"/></td>
+    <td>Operaciones, calidad, optimización industrial</td>
   </tr>
   <tr>
-    <td>📊</td>
-    <td><b>Lean Six Sigma</b></td>
-    <td>Lean Management module (certificación internacional)</td>
-  </tr>
-  <tr>
-    <td>🌐</td>
-    <td><b>Networking</b></td>
-    <td>Cisco Networking Basics</td>
-  </tr>
-  <tr>
-    <td>☕</td>
-    <td><b>Java + OCI</b></td>
-    <td>Oracle ONE / OCI Foundations vía Alura Latam</td>
+    <td>📚 <b>LinkedIn Learning</b></td>
+    <td>LinkedIn (paid)</td>
+    <td><img src="https://img.shields.io/badge/Activo-Continuo-0A66C2?style=flat-square"/></td>
+    <td>Cursos varios de productividad, datos y soft skills</td>
   </tr>
 </table>
 
+<details>
+<summary>🌐 <b>Idiomas</b></summary>
+
+- **Español** — Nativo
+- **Inglés** — Beca **Bécalos** (en formación)
+
+</details>
 ---
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
