@@ -159,6 +159,15 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
   <img src="https://raw.githubusercontent.com/jose2501106-IA/jose2501106-IA/output/github-snake-dark.svg" alt="snake animation"/>
 </div>
 
+
+### 🏅 GitHub Achievements
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=jose2501106-IA&theme=tokyonight&no-frame=true&no-bg=true&column=4&row=2&margin-w=15&margin-h=15&title=Commits,Repositories,Stars,Followers,PullRequest,Issues,MultipleLang,Reviews" alt="trophies"/>
+</div>
+
+
+
 ### 🏆 Trophies
 
 <div align="center">
