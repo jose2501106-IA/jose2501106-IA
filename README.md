@@ -4,7 +4,7 @@
 
 <div align="center">
   
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=220&section=header&text=Jos%C3%A9%20Hugo%20Meza&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ing.%20Industrial%20%2B%20IA%20%C2%B7%20Builder%20con%20Claude%20Code&descAlignY=58&descSize=18" alt="banner"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=220&section=header&text=Jos%C3%A9%20Hugo%20Meza&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ing.%20IA%20%2B%20Industrial%20%C2%B7%20Builder%20con%20Claude%20Code&descAlignY=58&descSize=18" alt="banner"/>
 
   <a href="https://github.com/jose2501106-IA">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&width=720&lines=Estudiante+de+doble+ingenier%C3%ADa+%F0%9F%8E%93;Operador+de+almac%C3%A9n+%E2%86%92+Developer+%F0%9F%9A%80;Construyo+IA+aplicada+a+operaciones+reales;Validaci%C3%B3n+%2B+Tests+%2B+CI+antes+de+cada+commit" alt="Typing SVG"/>
@@ -18,7 +18,7 @@
 
 <div align="center">
 
-  <img src="https://img.shields.io/badge/-Ing.%20Industrial%20%2B%20IA-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=58A6FF" alt="Carrera"/>
+  <img src="https://img.shields.io/badge/-Ing.%20IA%20%2B%20Industrial-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=58A6FF" alt="Carrera"/>
   <img src="https://img.shields.io/badge/-CDMX%2C%20MX-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=10B981" alt="Ubicación"/>
   <img src="https://img.shields.io/badge/-Becario%20Santander--An%C3%A1huac%202026-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=F59E0B" alt="Becario"/>
   <img src="https://komarev.com/ghpvc/?username=jose2501106-IA&label=Visitas+al+perfil&color=58A6FF&style=for-the-badge" alt="Profile views"/>
@@ -33,7 +33,7 @@
 
 ## 🧠 ¿Quién soy?
 
-Estudiante de **doble ingeniería** —Industrial (UVEG) + IA (Hybridge Education)— con algo escaso a mi edad: **opero un negocio real mientras estudio.**
+Estudiante de **doble ingeniería** —IA (Hybridge Education) + Industrial (UVEG)— con algo escaso a mi edad: **opero un negocio real mientras estudio.**
 
 Manejo **Casa Muñoz** 🥚 —un almacén de huevo en la Central de Abastos de CDMX— y desde ahí aplico todo lo que aprendo: pipelines de auditoría automatizada, sistemas IoT para almacenes, asistentes con IA, arquitecturas cloud.
 
@@ -50,7 +50,7 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
     </td>
     <td align="center" width="50%">
       <h3>⚙️ Aplico al mundo real</h3>
-      <img src="https://img.shields.io/badge/Casa_Mu%C3%B1oz-Almac%C3%A9n_CDMX-10B981?style=for-the-badge" alt="Casa Muñoz"/>
+      <img src="https://img.shields.io/badge/Central_de_Abastos-Almac%C3%A9n_CDMX-10B981?style=for-the-badge" alt="Casa Muñoz"/>
       <p><i>Pipeline de auditoría v7 en producción. <br/>Operaciones diarias automatizadas con código.</i></p>
     </td>
   </tr>
