@@ -35,7 +35,7 @@
 
 Estudiante de **doble ingeniería** —IA (Hybridge Education) + Industrial (UVEG)— con algo escaso a mi edad: **trabajo en un negocio real mientras estudio.**
 
-Entré a un **negocio mayorista de la Central de Abasto** 🥚 como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como independiente, le construyo **soluciones de IA y automatización** que se usan todos los días.
+Entré a un **negocio mayorista de la Central de Abasto** 🥚 como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como independiente, le construyo **automatizaciones que se usan todos los días** y desarrollo sus primeras **soluciones de IA**.
 
 Mi misión: usar **IA + datos + automatización** para resolver problemas operacionales reales. Nada de demos.
 
