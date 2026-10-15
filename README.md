@@ -33,9 +33,9 @@
 
 ## 🧠 ¿Quién soy?
 
-Estudiante de **doble ingeniería** —IA (Hybridge Education) + Industrial (UVEG)— con algo escaso a mi edad: **opero un negocio real mientras estudio.**
+Estudiante de **doble ingeniería** —IA (Hybridge Education) + Industrial (UVEG)— con algo escaso a mi edad: **trabajo en un negocio real mientras estudio.**
 
-Manejo **Casa Muñoz** 🥚 —un almacén de huevo en la Central de Abastos de CDMX— y desde ahí aplico todo lo que aprendo: pipelines de auditoría automatizada, sistemas IoT para almacenes, asistentes con IA, arquitecturas cloud.
+Entré a un **negocio mayorista de la Central de Abasto** 🥚 como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como independiente, le construyo **soluciones de IA y automatización** que se usan todos los días.
 
 Mi misión: usar **IA + datos + automatización** para resolver problemas operacionales reales. Nada de demos.
 
@@ -50,7 +50,7 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
     </td>
     <td align="center" width="50%">
       <h3>⚙️ Aplico al mundo real</h3>
-      <img src="https://img.shields.io/badge/Central_de_Abastos-Almac%C3%A9n_CDMX-10B981?style=for-the-badge" alt="Casa Muñoz"/>
+      <img src="https://img.shields.io/badge/Central_de_Abasto-Almac%C3%A9n_CDMX-10B981?style=for-the-badge" alt="Central de Abasto · CDMX"/>
       <p><i>Pipeline de auditoría v7 en producción. <br/>Operaciones diarias automatizadas con código.</i></p>
     </td>
   </tr>
@@ -65,10 +65,9 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
 ## 🚀 En qué estoy trabajando
 
 ```yaml
-🥚 Central de Abastos       → Pipeline de auditoría automatizada (Python + Apps Script)
-🚀 Entrepreneurship         → Startup de automatización con Industry 4.0 (Arduino + IoT)
+🥚 Central de Abasto        → Pipeline de auditoría automatizada (Python + Apps Script)
 🤖 AI Assistant             → Stack agéntico (Claude Code + AWS + Lovable + Hostinger)
-🎓 Líderes Cient.           → Aplicación 2026 + 2 becas activas (Anahuac Universidad, Harvard University en Aspire Leaders Program)
+🎓 Líderes Cient.           → Aplicación 2026 + 2 becas activas (Universidad Anáhuac, Aspire Leaders Program)
 ```
 
 ---
@@ -85,7 +84,7 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
 <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,js,ts,bash,html,css&perline=10" /></a>
 
 #### 🤖 IA, datos & automatización
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=tensorflow,sklearn,pandas,numpy" /></a>
+<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pandas,numpy" /></a>
 <img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude"/>
 <img src="https://img.shields.io/badge/Apps_Script-4285F4?style=flat-square&logo=google&logoColor=white" alt="Apps Script"/>
 <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI"/>
@@ -94,9 +93,8 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
 <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=aws,docker,git,github,githubactions,vscode,linux" /></a>
 
 #### 🔧 Hardware & operaciones
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=raspberrypi,arduino" /></a>
+<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=arduino" /></a>
 <img src="https://img.shields.io/badge/Lean_Six_Sigma-005571?style=flat-square&logoColor=white" alt="Lean Six Sigma"/>
-<img src="https://img.shields.io/badge/Cisco-1BA0D7?style=flat-square&logo=cisco&logoColor=white" alt="Cisco"/>
 
 </div>
 
@@ -193,21 +191,9 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
   </tr>
   <tr>
     <td>📊 <b>Lean Six Sigma</b></td>
-    <td>The Council for Six Sigma Certification</td>
+    <td>Lean Six Sigma Institute · avalado por The Council for Six Sigma Certification</td>
     <td><img src="https://img.shields.io/badge/En%20curso-Lean%20Management-F59E0B?style=flat-square"/></td>
     <td>Optimización de procesos, kaizen, value stream mapping</td>
-  </tr>
-  <tr>
-    <td>🌐 <b>Cisco Networking Basics</b></td>
-    <td>Cisco Networking Academy</td>
-    <td><img src="https://img.shields.io/badge/En%20curso-Networking-1BA0D7?style=flat-square"/></td>
-    <td>TCP/IP, routing, switching, fundamentos de red</td>
-  </tr>
-  <tr>
-    <td>☕ <b>Java + OCI Foundations</b></td>
-    <td>Oracle ONE / Alura Latam</td>
-    <td><img src="https://img.shields.io/badge/En%20curso-Cloud%20%26%20OOP-F80000?style=flat-square"/></td>
-    <td>Java fundamentals + Oracle Cloud Infrastructure</td>
   </tr>
   <tr>
     <td>🎓 <b>AI Engineering</b></td>
@@ -220,12 +206,6 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
     <td>UVEG</td>
     <td><img src="https://img.shields.io/badge/En%20curso-Doble%20titulaci%C3%B3n-10B981?style=flat-square"/></td>
     <td>Operaciones, calidad, optimización industrial</td>
-  </tr>
-  <tr>
-    <td>📚 <b>LinkedIn Learning</b></td>
-    <td>LinkedIn (paid)</td>
-    <td><img src="https://img.shields.io/badge/Activo-Continuo-0A66C2?style=flat-square"/></td>
-    <td>Cursos varios de productividad, datos y soft skills</td>
   </tr>
 </table>
 
@@ -261,7 +241,7 @@ No todo es technical. Tengo background en oratoria y vida cívica que entrena ha
 
 ## 🤝 Conectemos
 
-Si lo que ves resuena con algo que estés construyendo, escribime por LinkedIn. Estoy abierto a **pasantías, colaboraciones y proyectos** donde la IA aplicada a operaciones pueda mover la aguja.
+¿Hablamos de IA aplicada a operaciones? Escríbeme a [jose2501106@hybridge.education](mailto:jose2501106@hybridge.education) o por LinkedIn.
 
 <div align="center">
   <a href="https://www.linkedin.com/in/josehugomeza-ai">
@@ -277,7 +257,7 @@ Si lo que ves resuena con algo que estés construyendo, escribime por LinkedIn. 
 
 <div align="center">
 
-  <i>"Ingeniero industrial por formación, developer por curiosidad, operador por necesidad. <br/>Construyo lo que necesito para que mi negocio funcione."</i>
+  <i>"Ingeniero industrial en formación, developer por curiosidad, operador por necesidad."</i>
 
   <br/><br/>
 
