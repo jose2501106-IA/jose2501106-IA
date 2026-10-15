@@ -7,7 +7,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=220&section=header&text=Jos%C3%A9%20Hugo%20Meza&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ing.%20IA%20%2B%20Industrial%20%C2%B7%20Builder%20con%20Claude%20Code&descAlignY=58&descSize=18" alt="banner"/>
 
   <a href="https://github.com/jose2501106-IA">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&width=720&lines=Estudiante+de+doble+ingenier%C3%ADa+%F0%9F%8E%93;Operador+de+almac%C3%A9n+%E2%86%92+Developer+%F0%9F%9A%80;Construyo+IA+aplicada+a+operaciones+reales;Validaci%C3%B3n+%2B+Tests+%2B+CI+antes+de+cada+commit" alt="Typing SVG"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&width=720&lines=Estudiante+de+doble+ingenier%C3%ADa+%F0%9F%8E%93;Operador+de+almac%C3%A9n+%E2%86%92+Developer+%F0%9F%9A%80;Automatizaci%C3%B3n+inteligente+y+agentes+de+IA;Validaci%C3%B3n+%2B+Tests+%2B+CI+antes+de+cada+commit" alt="Typing SVG"/>
   </a>
 
 </div>
@@ -33,9 +33,9 @@
 
 ## 🧠 ¿Quién soy?
 
-Estudiante de **doble ingeniería** —IA (Hybridge Education) + Industrial (UVEG)— con algo escaso a mi edad: **trabajo en un negocio real mientras estudio.**
+Estudiante de **doble ingeniería** —IA (Hybridge Education) + Industrial (UVEG)— con algo escaso a mi edad: **trabajo en una empresa real mientras estudio.**
 
-Entré a un **negocio mayorista de la Central de Abasto** 🥚 como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como independiente, le construyo **soluciones de IA y automatización** que se usan todos los días.
+Entré a una **empresa de distribución** como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como desarrollador independiente, la apoyo con **automatizaciones que se usan todos los días** y desarrollo sus primeras **soluciones de IA**.
 
 Mi misión: usar **IA + datos + automatización** para resolver problemas operacionales reales. Nada de demos.
 
@@ -50,7 +50,7 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
     </td>
     <td align="center" width="50%">
       <h3>⚙️ Aplico al mundo real</h3>
-      <img src="https://img.shields.io/badge/Central_de_Abasto-Almac%C3%A9n_CDMX-10B981?style=for-the-badge" alt="Central de Abasto · CDMX"/>
+      <img src="https://img.shields.io/badge/Pipeline_v7-En_producci%C3%B3n-10B981?style=for-the-badge" alt="Pipeline v7 en producción"/>
       <p><i>Pipeline de auditoría v7 en producción. <br/>Operaciones diarias automatizadas con código.</i></p>
     </td>
   </tr>
@@ -65,7 +65,7 @@ Mi misión: usar **IA + datos + automatización** para resolver problemas operac
 ## 🚀 En qué estoy trabajando
 
 ```yaml
-🥚 Central de Abasto        → Pipeline de auditoría automatizada (Python + Apps Script)
+📦 Empresa de distribución  → Pipeline de auditoría automatizada (Python + Apps Script)
 🤖 AI Assistant             → Stack agéntico (Claude Code + AWS + Lovable + Hostinger)
 🎓 Líderes Cient.           → Aplicación 2026 + 2 becas activas (Universidad Anáhuac, Aspire Leaders Program)
 ```
@@ -241,7 +241,7 @@ No todo es technical. Tengo background en oratoria y vida cívica que entrena ha
 
 ## 🤝 Conectemos
 
-¿Hablamos de IA aplicada a operaciones? Escríbeme a [jose2501106@hybridge.education](mailto:jose2501106@hybridge.education) o por LinkedIn.
+¿Hablamos de automatización inteligente? Escríbeme a [jose2501106@hybridge.education](mailto:jose2501106@hybridge.education) o por LinkedIn.
 
 <div align="center">
   <a href="https://www.linkedin.com/in/josehugomeza-ai">
