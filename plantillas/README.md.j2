@@ -1,0 +1,89 @@
+<!-- Generado por scripts/generar_readme.py desde data/perfil.yml del portafolio. No lo edites a mano: cambia perfil.yml y vuelve a generar. -->
+
+<a href="{{ s.sitio.url }}">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-oscuro.jpg">
+    <img src="assets/banner-claro.jpg" width="100%" alt="{{ t(s.sitio.nombre) }} · {{ t(s.portada.subtitulo) }} {{ t(s.portada.bajada) }}.">
+  </picture>
+</a>
+
+<p align="center">
+  <a href="{{ s.sitio.url }}"><b>Portafolio</b></a> ·
+  <a href="{{ s.sitio.url }}en/">English</a> ·
+  <a href="{{ s.contacto.linkedin_url }}">LinkedIn</a> ·
+  <a href="mailto:{{ s.contacto.correo }}">{{ s.contacto.correo }}</a> ·
+  {{ t(s.contacto.ubicacion) }}
+</p>
+
+{{ t(s.portada.historia) }}
+
+## {{ t(s.secciones.roles.titulo) }}
+
+{% for r in s.roles %}
+- **{{ t(r.titulo) }}.** {{ t(r.texto) }} <sub>{{ t(s.ui.evidencia) }} {% for e in r.evidencia %}[{{ e }}](#{{ anclas[e] }}){{ " · " if not loop.last }}{% endfor %}</sub>
+{% endfor %}
+
+<sub>{{ t(s.como_trabajo) }}</sub>
+
+## {{ t(s.secciones.proyectos.titulo) }}
+{% for p in s.proyectos %}
+
+### {{ p.codigo }} · {{ t(p.nombre) }}
+
+**{{ t(p.subtitulo) }}** · `{{ t(p.estado) }}`
+
+{% if p.distincion is defined %}
+> **{{ t(p.distincion.titulo) }}** — {{ t(p.distincion.texto) }}
+
+{% endif %}
+{{ t(p.descripcion) }}
+
+{% for c in p.cifras %}**{{ t(c.valor) }}** {{ t(c.texto) }}{{ " · " if not loop.last }}{% endfor %}<br>
+<sub>{{ t(s.ui.demuestra) }} {{ t(p.demuestra) }}</sub>
+
+{% for tec in p.tecnologias %}`{{ t(tec) }}` {% endfor +%}
+
+{% if p.enlaces %}
+{% for l in p.enlaces %}[{{ t(l.texto) }} →]({{ l.url }}){{ " · " if not loop.last }}{% endfor %}
+
+{% else %}
+<sub>{{ t(s.ui.privado) }}</sub>
+
+{% endif %}
+{% endfor %}
+
+## {{ t(s.secciones.perfil.titulo) }}
+
+{{ t(s.perfil.intro) }}
+
+| Área | {{ t(s.ui.herramientas)|capitalize }} |
+|---|---|
+{% for g in s.perfil.herramientas %}
+| `{{ t(g.grupo) }}` | {{ g.lista|map("t")|join(" · ") }} |
+{% endfor %}
+| `{{ t(s.ui.idiomas) }}` | {{ s.perfil.idiomas|map("t")|join(" — ") }} |
+
+| Institución | Programa | Estado |
+|---|---|---|
+{% for f in s.perfil.formacion %}
+| **{{ t(f.institucion) }}** | {{ t(f.programa) }} | {{ t(f.estado) }}{% if f.verificar is defined %} · [{{ t(s.ui.verificar) }}]({{ f.verificar }}){% endif %} |
+{% endfor %}
+
+**{{ t(s.ui.habilidades_blandas)|capitalize }}.** {{ t(s.perfil.habilidades_blandas) }}
+
+## {{ t(s.seccion_contacto.titulo) }}
+
+{{ t(s.seccion_contacto.texto) }}
+
+[{{ s.contacto.correo }}](mailto:{{ s.contacto.correo }}) · [{{ s.contacto.linkedin_txt }}]({{ s.contacto.linkedin_url }}) · [Portafolio]({{ s.sitio.url }})
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="{{ serpiente }}/github-snake-dark.svg">
+  <img src="{{ serpiente }}/github-snake.svg" width="100%" alt="Mis contribuciones en GitHub del último año, recorridas por una serpiente">
+</picture>
+
+<p align="center"><i>{{ t(s.pie.frase) }}</i></p>
+
+<p align="center"><sub>Este README se genera desde <code>perfil.yml</code>, la misma fuente que usa el portafolio.</sub></p>

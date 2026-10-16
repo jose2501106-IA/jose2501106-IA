@@ -1,266 +1,124 @@
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 🌊 BANNER ANIMADO -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- Generado por scripts/generar_readme.py desde data/perfil.yml del portafolio. No lo edites a mano: cambia perfil.yml y vuelve a generar. -->
 
-<div align="center">
-  
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=220&section=header&text=Jos%C3%A9%20Hugo%20Meza&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Ing.%20IA%20%2B%20Industrial%20%C2%B7%20Builder%20con%20Claude%20Code&descAlignY=58&descSize=18" alt="banner"/>
+<a href="https://jose2501106-ia.github.io/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-oscuro.jpg">
+    <img src="assets/banner-claro.jpg" width="100%" alt="José Hugo Meza · Automatización inteligente y agentes de IA. Python, datos y modelos de lenguaje · Estudiante de Ing. en IA e Industrial.">
+  </picture>
+</a>
 
-  <a href="https://github.com/jose2501106-IA">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&width=720&lines=Estudiante+de+doble+ingenier%C3%ADa+%F0%9F%8E%93;Operador+de+almac%C3%A9n+%E2%86%92+Developer+%F0%9F%9A%80;Automatizaci%C3%B3n+inteligente+y+agentes+de+IA;Validaci%C3%B3n+%2B+Tests+%2B+CI+antes+de+cada+commit" alt="Typing SVG"/>
-  </a>
+<p align="center">
+  <a href="https://jose2501106-ia.github.io/"><b>Portafolio</b></a> ·
+  <a href="https://jose2501106-ia.github.io/en/">English</a> ·
+  <a href="https://www.linkedin.com/in/josehugomeza-ai/">LinkedIn</a> ·
+  <a href="mailto:jose2501106@hybridge.education">jose2501106@hybridge.education</a> ·
+  Ciudad de México, México
+</p>
 
-</div>
+Entré a una empresa de distribución como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como desarrollador independiente, la apoyo con automatizaciones que se usan todos los días y desarrollo sus primeras soluciones de IA, mientras estudio dos ingenierías: Inteligencia Artificial e Industrial.
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 🏷️ BADGES DE IDENTIDAD -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+## Lo que hago, con evidencia
 
-<div align="center">
+- **IA y agentes.** Agentes con herramientas e integración de modelos de lenguaje (Claude API), del prototipo a la herramienta funcional. <sub>EVIDENCIA: [P-01](#p-01--agentemx) · [P-02](#p-02--neurona-artificial)</sub>
+- **Automatización de procesos.** Automatizo procesos operativos con Python y Apps Script, de la captura de datos a la auditoría diaria. <sub>EVIDENCIA: [P-03](#p-03--pipeline-de-auditoría)</sub>
+- **Mejora continua / Lean.** Auditoría diaria de la operación del almacén, mejorada versión tras versión hasta la v7; formación en Lean Management (Lean Six Sigma Institute). <sub>EVIDENCIA: [P-03](#p-03--pipeline-de-auditoría)</sub>
+- **Análisis de datos.** Limpieza y análisis con Pandas, y tableros para decidir con números. <sub>EVIDENCIA: [P-01](#p-01--agentemx) · [P-03](#p-03--pipeline-de-auditoría)</sub>
 
-  <img src="https://img.shields.io/badge/-Ing.%20IA%20%2B%20Industrial-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=58A6FF" alt="Carrera"/>
-  <img src="https://img.shields.io/badge/-CDMX%2C%20MX-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=10B981" alt="Ubicación"/>
-  <img src="https://img.shields.io/badge/-Becario%20Santander--An%C3%A1huac%202026-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=F59E0B" alt="Becario"/>
-  <img src="https://komarev.com/ghpvc/?username=jose2501106-IA&label=Visitas+al+perfil&color=58A6FF&style=for-the-badge" alt="Profile views"/>
+<sub>// Cómo trabajo: diagnóstico → diseño → construcción con IA y pruebas en 3 capas → control con DMAIC.</sub>
 
-</div>
+## Proyectos que lo demuestran
 
-<br/>
+### P-01 · AgenteMX
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 🧠 ¿QUIÉN SOY? -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+**Agente de IA para transparencia legislativa** · `FUNCIONAL`
 
-## 🧠 ¿Quién soy?
+Responde en lenguaje natural cómo votan los diputados, con datos oficiales y citas a la fuente. Incluye índice de disciplina partidista, detector de contradicciones y radar electoral.
 
-Estudiante de **doble ingeniería** —IA (Hybridge Education) + Industrial (UVEG)— con algo escaso a mi edad: **trabajo en una empresa real mientras estudio.**
+**8** herramientas del agente · **10k+** votos individuales · **7** partidos cubiertos<br>
+<sub>DEMUESTRA: Agentes con herramientas · ETL de datos públicos · interfaz en Streamlit</sub>
 
-Entré a una **empresa de distribución** como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como desarrollador independiente, la apoyo con **automatizaciones que se usan todos los días** y desarrollo sus primeras **soluciones de IA**.
+`Claude API` `SQLite` `Pandas` `BeautifulSoup` `Streamlit` 
 
-Mi misión: usar **IA + datos + automatización** para resolver problemas operacionales reales. Nada de demos.
+[Ver repositorio →](https://github.com/jose2501106-IA/agente-legislativo-mx)
 
-<table align="center">
-  <tr>
-    <td align="center" width="50%">
-      <h3>🤝 Construyo con Claude Code</h3>
-      <a href="https://github.com/jose2501106-IA/space-invader/blob/main/docs/METHODOLOGY.md">
-        <img src="https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code"/>
-      </a>
-      <p><i>Planning → Implementación → Validación a 3 capas → Commit. <br/>Documenté la metodología completa.</i></p>
-    </td>
-    <td align="center" width="50%">
-      <h3>⚙️ Aplico al mundo real</h3>
-      <img src="https://img.shields.io/badge/Pipeline_v7-En_producci%C3%B3n-10B981?style=for-the-badge" alt="Pipeline v7 en producción"/>
-      <p><i>Pipeline de auditoría v7 en producción. <br/>Operaciones diarias automatizadas con código.</i></p>
-    </td>
-  </tr>
-</table>
+### P-02 · Neurona Artificial
 
----
+**Curso abierto para entender la IA por dentro** · `EN CONSTRUCCIÓN`
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 🚀 LO QUE HAGO HOY -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+Videos interactivos con laboratorio para entender cómo funciona la inteligencia artificial, de una sola neurona a los agentes que deciden y actúan. Cada lección trae capítulos, subtítulos y un laboratorio para mover cada pieza.
 
-## 🚀 En qué estoy trabajando
+**2** lecciones publicadas · **7** lecciones en camino<br>
+<sub>DEMUESTRA: Fundamentos de IA · explicar lo técnico con claridad · diseño de producto</sub>
 
-```yaml
-📦 Empresa de distribución  → Pipeline de auditoría automatizada (Python + Apps Script)
-🤖 AI Assistant             → Stack agéntico (Claude Code + AWS + Lovable + Hostinger)
-🎓 Líderes Cient.           → Aplicación 2026 + 2 becas activas (Universidad Anáhuac, Aspire Leaders Program)
-```
+`HTML` `CSS` `JavaScript` `Sistema de diseño propio` 
 
----
+[Ver curso →](https://jose2501106-ia.github.io/NeuronaArtificial/) · [Ver repositorio →](https://github.com/jose2501106-IA/NeuronaArtificial)
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 🛠️ TECH STACK -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+### P-03 · Pipeline de auditoría
 
-## 🛠️ Tech Stack
+**Empresa de distribución · CDMX** · `EN PRODUCCIÓN`
 
-<div align="center">
+Automatiza la auditoría diaria de la operación del almacén con Python y Apps Script. Va en su versión 7 y corre en producción todos los días.
 
-#### 🐍 Lenguajes
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,js,ts,bash,html,css&perline=10" /></a>
+**v7** versión en producción<br>
+<sub>DEMUESTRA: Software en producción · iteración continua hasta la v7</sub>
 
-#### 🤖 IA, datos & automatización
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pandas,numpy" /></a>
-<img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude"/>
-<img src="https://img.shields.io/badge/Apps_Script-4285F4?style=flat-square&logo=google&logoColor=white" alt="Apps Script"/>
-<img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI"/>
+`Python` `Apps Script` `Google Sheets` 
 
-#### ☁️ Cloud & DevOps
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=aws,docker,git,github,githubactions,vscode,linux" /></a>
+<sub>Repositorio privado</sub>
 
-#### 🔧 Hardware & operaciones
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=arduino" /></a>
-<img src="https://img.shields.io/badge/Lean_Six_Sigma-005571?style=flat-square&logoColor=white" alt="Lean Six Sigma"/>
+### P-04 · Cuentas Claras
 
-</div>
+**Bitácora de fiado cofirmada · Goya Hack 2026** · `3.er LUGAR`
 
----
+> **3.er LUGAR · TRACK CONTENIDO** — Goya Hack 2026 · Facultad de Ingeniería, UNAM
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 📌 PROYECTO DESTACADO -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+La bodega registra cada venta a crédito y el cliente la confirma desde su teléfono: nadie anota una deuda solo ni borra el historial. Las reglas las hace cumplir un contrato en Stellar.
 
-## 📌 Proyecto destacado
+**3** reglas en el contrato · **2** firmas por nota<br>
+<sub>DEMUESTRA: Contratos inteligentes · diseño de producto · pitch de 3 minutos</sub>
 
-<div align="center">
-  <a href="https://github.com/jose2501106-IA/space-invader">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=jose2501106-IA&repo=space-invader&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="Space Invader"/>
-  </a>
-</div>
+`Stellar` `Soroban · Rust` `JavaScript` `Node.js` 
 
-> 🎮 **Space Invader Hybridge** — Clon completo en Python+pygame, construido en **14 fases iterativas con Claude Code** y validación a 3 capas (smoke + sintética + visual).
+[Ver repositorio →](https://github.com/jose2501106-IA/goyahack_cuentas-claras)
 
-<div align="center">
+## Formación y herramientas
 
-  [![CI](https://github.com/jose2501106-IA/space-invader/actions/workflows/ci.yml/badge.svg)](https://github.com/jose2501106-IA/space-invader/actions)
-  [![Tests](https://img.shields.io/badge/tests-26%20passing-brightgreen?style=flat-square)](https://github.com/jose2501106-IA/space-invader/tree/main/tests)
-  [![Methodology](https://img.shields.io/badge/📖_Metodolog%C3%ADa-completa-D97757?style=flat-square)](https://github.com/jose2501106-IA/space-invader/blob/main/docs/METHODOLOGY.md)
+Estudio dos ingenierías al mismo tiempo: Inteligencia Artificial en Hybridge Education e Industrial en la UVEG. En paralelo automatizo la operación de una empresa de distribución, donde convierto lo que aprendo en sistemas que se usan todos los días.
 
-</div>
+| Área | Herramientas |
+|---|---|
+| `PROGRAMACIÓN` | Python · JavaScript · TypeScript · SQL · Bash |
+| `IA Y DATOS` | Claude API · Claude Code · OpenAI · Pandas · NumPy · Streamlit |
+| `AUTOMATIZACIÓN` | Apps Script · Google Workspace · Excel avanzado · GitHub Actions |
+| `CLOUD Y HARDWARE` | AWS · Docker · Linux · Arduino |
+| `PROCESOS` | Lean Six Sigma · DMAIC |
+| `IDIOMAS` | Español · nativo — Inglés · A2, en formación (beca Bécalos) |
 
-| Métrica | Valor |
-|---------|-------|
-| Commits | **18** (todos validados antes de mergear) |
-| Tests automatizados | **26** corriendo verdes en CI |
-| Líneas de Python | **~1,500** distribuidas en 11 clases |
-| Bugs del material original corregidos | **12** |
-| Bugs detectados en proceso (no producción) | **4** |
+| Institución | Programa | Estado |
+|---|---|---|
+| **Hybridge Education** | Ingeniería en Inteligencia Artificial | 3.er cuatrimestre de 8 |
+| **UVEG** | Ingeniería Industrial | 38% completado |
+| **Universidad Anáhuac México Norte** | Seminario de IA y Ciencia de Datos | Beca 100% · Santander 2026 |
+| **Aspire Leaders Program** | Programa de liderazgo global fundado por académicos de Harvard | Seleccionado |
+| **Oracle Next Education** | Inmersión: Agentes de IA para Negocios | Finalizado · 13 oct 2026 · 4 h · [Verificar autenticidad](https://app.aluracursos.com/immersion/certificate/00c74f55-f2d9-4ec7-990c-bcddc214aaa0) |
+| **Lean Six Sigma Institute** | Lean Management | En curso · avalado por The Council for Six Sigma Certification |
 
----
+**Habilidades blandas.** Comunicación: dos competencias nacionales de oratoria y Parlamento Juvenil. Liderazgo: Aspire Leaders Program. Ritmo de operación real: decisiones diarias en un negocio con clientes y proveedores.
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 📊 GITHUB STATS -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+## ¿Hablamos de automatización inteligente?
 
-## 📊 Mi actividad en GitHub
+Escríbeme por correo o por LinkedIn.
 
-<div align="center">
+[jose2501106@hybridge.education](mailto:jose2501106@hybridge.education) · [in/josehugomeza-ai](https://www.linkedin.com/in/josehugomeza-ai/) · [Portafolio](https://jose2501106-ia.github.io/)
 
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=jose2501106-IA&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=58A6FF&icon_color=58A6FF" />
-  <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=jose2501106-IA&theme=tokyonight&hide_border=true&background=0d1117&ring=58A6FF&fire=F59E0B&currStreakLabel=58A6FF" />
+<br>
 
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jose2501106-IA/jose2501106-IA/output/github-snake-dark.svg">
+  <img src="https://raw.githubusercontent.com/jose2501106-IA/jose2501106-IA/output/github-snake.svg" width="100%" alt="Mis contribuciones en GitHub del último año, recorridas por una serpiente">
+</picture>
 
-<div align="center">
+<p align="center"><i>“Ingeniero industrial en formación, developer por curiosidad, operador por necesidad.”</i></p>
 
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jose2501106-IA&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58A6FF&hide=html,css&langs_count=8" />
-
-</div>
-
-### 🐍 Snake comiéndose mis contributions
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/jose2501106-IA/jose2501106-IA/output/github-snake-dark.svg" alt="snake animation"/>
-</div>
-
-
-### 🏅 GitHub Achievements
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=jose2501106-IA&theme=tokyonight&no-frame=true&no-bg=true&column=4&row=2&margin-w=15&margin-h=15&title=Commits,Repositories,Stars,Followers,PullRequest,Issues,MultipleLang,Reviews" alt="trophies"/>
-</div>
-
-
-
-### 🏆 Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=jose2501106-IA&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=10" alt="trophies"/>
-</div>
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 🎯 CURRENTLY LEARNING -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🎯 En formación activa
-
-> *Certificaciones y cursos en progreso. Las muevo a "Certificaciones" cuando estén completadas.*
-
-<table>
-  <tr>
-    <th>Programa</th>
-    <th>Institución</th>
-    <th>Estado</th>
-    <th>Foco</th>
-  </tr>
-  <tr>
-    <td>📊 <b>Lean Six Sigma</b></td>
-    <td>Lean Six Sigma Institute · avalado por The Council for Six Sigma Certification</td>
-    <td><img src="https://img.shields.io/badge/En%20curso-Lean%20Management-F59E0B?style=flat-square"/></td>
-    <td>Optimización de procesos, kaizen, value stream mapping</td>
-  </tr>
-  <tr>
-    <td>🎓 <b>AI Engineering</b></td>
-    <td>Hybridge Education</td>
-    <td><img src="https://img.shields.io/badge/3er%20cuatrimestre-3%2F8-58A6FF?style=flat-square"/></td>
-    <td>Agentes, RAG, integraciones API, pipelines de datos</td>
-  </tr>
-  <tr>
-    <td>🏭 <b>Ingeniería Industrial</b></td>
-    <td>UVEG</td>
-    <td><img src="https://img.shields.io/badge/En%20curso-Doble%20titulaci%C3%B3n-10B981?style=flat-square"/></td>
-    <td>Operaciones, calidad, optimización industrial</td>
-  </tr>
-</table>
-
-<details>
-<summary>🌐 <b>Idiomas</b></summary>
-
-- **Español** — Nativo
-- **Inglés** — Beca **Bécalos** (en formación)
-
-</details>
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 🎤 MÁS ALLÁ DEL CÓDIGO -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🎤 Más allá del código
-
-No todo es technical. Tengo background en oratoria y vida cívica que entrena habilidades que ningún libro de programación enseña:
-
-- 🥇 **2 competencias nacionales de oratoria** (Flores Magón, Benito Juárez Oaxaca)
-- 🏛️ **Parlamento Juvenil** — debate y políticas públicas
-- 🎓 **Aplicación a Líderes Científicos 2026**
-- 🌐 **Beca Bécalos** para inglés
-
-> Esto se traduce en algo concreto: comunicar ideas técnicas a no-técnicos, presentar pitches con confianza, y construir narrativas que la gente entiende y compra.
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- 🤝 CONTACTO -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-## 🤝 Conectemos
-
-¿Hablamos de automatización inteligente? Escríbeme a [jose2501106@hybridge.education](mailto:jose2501106@hybridge.education) o por LinkedIn.
-
-<div align="center">
-  <a href="https://www.linkedin.com/in/josehugomeza-ai">
-    <img src="https://img.shields.io/badge/LinkedIn-Conectemos-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-</div>
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- ✨ QUOTE FINAL + WAVE FOOTER -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-  <i>"Ingeniero industrial en formación, developer por curiosidad, operador por necesidad."</i>
-
-  <br/><br/>
-
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=120&section=footer" alt="footer"/>
-
-</div>
+<p align="center"><sub>Este README se genera desde <code>perfil.yml</code>, la misma fuente que usa el portafolio.</sub></p>

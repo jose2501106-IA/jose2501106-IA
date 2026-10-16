@@ -20,8 +20,10 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: jose2501106-IA
+          # Paleta del portafolio: versión clara y oscura (el README elige según el tema de GitHub)
           outputs: |
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#58A6FF&color_dots=#0d1117,#1f6feb,#2ea043,#58A6FF,#F59E0B
+            dist/github-snake.svg?color_snake=#0046B8&color_dots=#EBF0F8,#C9D4E8,#9DB3DE,#5A84D6,#0046B8
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#8FB4FF&color_dots=#161B22,#14306A,#1F4E9E,#4F7FD6,#8FB4FF
 
       - name: Push the content of dist/ to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
