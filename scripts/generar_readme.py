@@ -7,7 +7,8 @@ Uso:
 Salida: README.md, assets/banner-claro.jpg y assets/banner-oscuro.jpg.
 Requiere: jinja2, pyyaml, pillow y playwright con Chromium (ver scripts/requisitos.txt).
 
-Del portafolio solo se leen data/perfil.yml, las fuentes y el retrato. Nada se
+Del portafolio solo se leen data/perfil.yml y las fuentes. El retrato no va en el
+encabezado porque tu foto ya está en el avatar de GitHub. Nada se
 publica si no está en perfil.yml, y el README no depende de servicios externos:
 la única imagen remota es la serpiente, que genera el workflow de este mismo repo.
 """
@@ -62,7 +63,7 @@ async def generar_banners(s, portafolio):
                     tema=tema, base=portafolio.as_uri() + "/", anio=s["sitio"]["anio"],
                     hoja=t(s["ui"]["hoja"]), escala=t(s["ui"]["escala"]), kicker=t(s["portada"]["linea_superior"]),
                     nombre=s["sitio"]["nombre_h1"], sub=t(s["portada"]["subtitulo"]), bajada=t(s["portada"]["bajada"]),
-                    pie_izq=t(s["portada"]["retrato"]["pie_izq"]), pie_der=t(s["portada"]["retrato"]["pie_der"]),
+                    pie_izq=t(s["portada"]["retrato"]["pie_izq"]), pie_der=t(s["portada"]["retrato"]["pie_der"]), marca=s["sitio"]["marca"],
                     dominio=s["sitio"]["url"].removeprefix("https://").rstrip("/"))
                 archivo = tmp / f"banner-{tema}.html"
                 archivo.write_text(html, encoding="utf-8")
@@ -81,7 +82,7 @@ async def generar_banners(s, portafolio):
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--portafolio", type=pathlib.Path, default=RAIZ.parent / "jose2501106-ia.github.io",
-                        help="carpeta del repo del portafolio (de ahí se leen perfil.yml, fuentes y retrato)")
+                        help="carpeta del repo del portafolio (de ahí se leen perfil.yml y las fuentes)")
     parser.add_argument("--solo-texto", action="store_true", help="regenera README.md sin volver a dibujar los encabezados")
     args = parser.parse_args()
     portafolio = args.portafolio.resolve()
