@@ -11,6 +11,7 @@
   <a href="{{ s.sitio.url }}"><b>Portafolio</b></a> ·
   <a href="{{ s.sitio.url }}en/">English</a> ·
   <a href="{{ s.contacto.linkedin_url }}">LinkedIn</a> ·
+  <a href="{{ s.sitio.url }}{{ t(s.cv.archivo) }}">{{ t(s.cv.nav) }} (PDF)</a> ·
   <a href="mailto:{{ s.contacto.correo }}">{{ s.contacto.correo }}</a> ·
   {{ t(s.contacto.ubicacion) }}
 </p>
@@ -32,8 +33,8 @@
 
 **{{ t(p.subtitulo) }}** · `{{ t(p.estado) }}`
 
-{% if p.distincion is defined %}
-> **{{ t(p.distincion.titulo) }}** — {{ t(p.distincion.texto) }}
+{% if p.distinciones is defined %}
+> {% for d in p.distinciones.premios %}**{{ t(d.titulo) }}**{{ " · " if not loop.last }}{% endfor %} — {{ t(p.distinciones.texto) }}
 
 {% endif %}
 {{ t(p.descripcion) }}
@@ -75,7 +76,7 @@
 
 {{ t(s.seccion_contacto.texto) }}
 
-[{{ s.contacto.correo }}](mailto:{{ s.contacto.correo }}) · [{{ s.contacto.linkedin_txt }}]({{ s.contacto.linkedin_url }}) · [Portafolio]({{ s.sitio.url }})
+[{{ s.contacto.correo }}](mailto:{{ s.contacto.correo }}) · [{{ s.contacto.linkedin_txt }}]({{ s.contacto.linkedin_url }}) · [Portafolio]({{ s.sitio.url }}) · [{{ t(s.cv.boton) }}]({{ s.sitio.url }}{{ t(s.cv.archivo) }})
 
 <br>
 

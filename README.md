@@ -11,6 +11,7 @@
   <a href="https://jose2501106-ia.github.io/"><b>Portafolio</b></a> ·
   <a href="https://jose2501106-ia.github.io/en/">English</a> ·
   <a href="https://www.linkedin.com/in/josehugomeza-ai/">LinkedIn</a> ·
+  <a href="https://jose2501106-ia.github.io/cv/jose-hugo-meza-cv-es.pdf">CV (PDF)</a> ·
   <a href="mailto:jose2501106@hybridge.education">jose2501106@hybridge.education</a> ·
   Ciudad de México, México
 </p>
@@ -69,9 +70,9 @@ Automatiza la auditoría diaria de la operación del almacén con Python y Apps 
 
 ### P-04 · Cuentas Claras
 
-**Bitácora de fiado cofirmada · Goya Hack 2026** · `3.er LUGAR`
+**Bitácora de fiado cofirmada · Goya Hack 2026** · `2 PREMIOS`
 
-> **3.er LUGAR · TRACK CONTENIDO** — Goya Hack 2026 · Facultad de Ingeniería, UNAM
+> **2.º LUGAR · TRACK POLLAR** · **3.er LUGAR · TRACK CONTENIDO** — Goya Hack 2026 · CriptoUNAM × Facultad de Ingeniería, UNAM
 
 La bodega registra cada venta a crédito y el cliente la confirma desde su teléfono: nadie anota una deuda solo ni borra el historial. Las reglas las hace cumplir un contrato en Stellar.
 
@@ -110,7 +111,7 @@ Estudio dos ingenierías al mismo tiempo: Inteligencia Artificial en Hybridge Ed
 
 Escríbeme por correo o por LinkedIn.
 
-[jose2501106@hybridge.education](mailto:jose2501106@hybridge.education) · [in/josehugomeza-ai](https://www.linkedin.com/in/josehugomeza-ai/) · [Portafolio](https://jose2501106-ia.github.io/)
+[jose2501106@hybridge.education](mailto:jose2501106@hybridge.education) · [in/josehugomeza-ai](https://www.linkedin.com/in/josehugomeza-ai/) · [Portafolio](https://jose2501106-ia.github.io/) · [Descargar CV (PDF)](https://jose2501106-ia.github.io/cv/jose-hugo-meza-cv-es.pdf)
 
 <br>
 
