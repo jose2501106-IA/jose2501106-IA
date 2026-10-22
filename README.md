@@ -34,7 +34,7 @@ Entré a una empresa de distribución como auxiliar administrativo y a los tres 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/herramientas-oscuro.webp">
-  <img src="assets/laminas/herramientas-claro.webp" width="100%" alt="Herramientas. Programación: Python, JavaScript, TypeScript, SQL, Bash; IA y datos: Claude API, Claude Code, OpenAI, Pandas, NumPy, Streamlit; Automatización: Apps Script, Google Workspace, Excel avanzado, GitHub Actions; Cloud y hardware: AWS, Docker, Linux, Arduino; Procesos: Lean Six Sigma, DMAIC. Idiomas: Español · nativo, Inglés · A2, en formación (beca Bécalos). Habilidades blandas: Comunicación: dos competencias nacionales de oratoria y Parlamento Juvenil. Liderazgo: Aspire Leaders Program. Ritmo de operación real: decisiones diarias en un negocio con clientes y proveedores.">
+  <img src="assets/laminas/herramientas-claro.webp" width="100%" alt="Herramientas. Programación: Python, JavaScript, TypeScript, SQL, Bash; IA y datos: Claude API, Claude Code, OpenAI, Pandas, NumPy, Streamlit; Automatización: Apps Script, Google Workspace, Excel avanzado, GitHub Actions; Cloud y hardware: AWS, Docker, Linux, Arduino; Procesos: Lean Six Sigma, DMAIC. Idiomas: Español · nativo, Inglés · A2, en formación (beca Bécalos). Habilidades blandas: Comunicación: dos competencias nacionales de oratoria y Parlamento Juvenil. Liderazgo: Aspire Leaders Program. Ritmo de operación real: decisiones diarias en un negocio con clientes y proveedores. Comunidad: embajador del Programa de Embajadores de Stellar en Latinoamérica (BAF), desde octubre de 2026.">
 </picture>
 
 <picture>

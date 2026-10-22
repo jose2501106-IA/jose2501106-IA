@@ -224,7 +224,7 @@
     {% endfor %}
     <div class="grupo"><span class="etiqueta">{{ t(s.ui.idiomas) }}</span><div class="chips">{% for i in s.perfil.idiomas %}<span class="chip">{{ t(i) }}</span>{% endfor %}</div></div>
   </div>
-  <div class="blandas"><span class="etiqueta">{{ t(s.ui.habilidades_blandas) }}</span><p>{{ t(s.perfil.habilidades_blandas) }}</p></div>
+  <div class="blandas"><span class="etiqueta">{{ t(s.ui.habilidades_blandas) }}</span><p>{{ t(s.perfil.habilidades_blandas) }}{% if s.perfil.comunidad is defined %} {{ t(s.perfil.comunidad) }}{% endif %}</p></div>
 </section>
 
 {# ═════════ Formación ═════════ #}

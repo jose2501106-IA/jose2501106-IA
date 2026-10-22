@@ -89,7 +89,8 @@ def textos_alternativos(s):
                              + f'. Tecnologías: {", ".join(map(t, p["tecnologias"]))}.'
                              + ("" if p["enlaces"] else f' {t(s["ui"]["privado"])}.') for p in s["proyectos"]), " "),
         "herramientas": "Herramientas. " + unir(f'{oracion(t(g["grupo"]))}: {", ".join(map(t, g["lista"]))}' for g in s["perfil"]["herramientas"])
-                        + f'. Idiomas: {", ".join(map(t, s["perfil"]["idiomas"]))}. {oracion(t(s["ui"]["habilidades_blandas"]))}: {t(s["perfil"]["habilidades_blandas"])}',
+                        + f'. Idiomas: {", ".join(map(t, s["perfil"]["idiomas"]))}. {oracion(t(s["ui"]["habilidades_blandas"]))}: {t(s["perfil"]["habilidades_blandas"])}'
+                        + (f' {t(s["perfil"]["comunidad"])}' if "comunidad" in s["perfil"] else ""),
         "formacion": f'{oracion(t(s["ui"]["formacion_programas"]))}. '
                      + unir(f'{t(f["institucion"])}: {t(f["programa"])} ({estado_formacion(f)})' for f in s["perfil"]["formacion"]) + ".",
         "contacto": f'{t(s["seccion_contacto"]["titulo"])} Correo: {s["contacto"]["correo"]}; LinkedIn: {s["contacto"]["linkedin_txt"]}; '
