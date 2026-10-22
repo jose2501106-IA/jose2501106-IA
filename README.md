@@ -51,6 +51,7 @@ Entré a una empresa de distribución como auxiliar administrativo y a los tres 
 </picture>
 </a>
 
+<p align="right"><sub><a href="https://jose2501106-ia.github.io/reconocimientos/2026-09-23_emerging-leaders-conference.pdf">Emerging Leaders Conference 2026 (Anáhuac · WYA) · Ver reconocimiento (PDF) →</a></sub></p>
 <p align="right"><sub><a href="https://jose2501106-ia.github.io/reconocimientos/2026-04-17_hackathon-vibe-coding-anahuac.pdf">Hackathon de Vibe Coding (Anáhuac) · Ver reconocimiento (PDF) →</a></sub></p>
 
 <a href="https://jose2501106-ia.github.io/#contacto">
