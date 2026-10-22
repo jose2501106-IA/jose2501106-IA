@@ -1,0 +1,14 @@
+# Temporales del generador (scripts/generar_readme.py los borra al terminar)
+.laminas-*.html
+__pycache__/
+.venv/
+
+# Secretos y llaves: nunca se suben
+.env
+.env.*
+*.pem
+*.key
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
