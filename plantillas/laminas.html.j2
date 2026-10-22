@@ -111,6 +111,7 @@
 
   /* ───────── Formación 3×2 ───────── */
   .credenciales { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .credenciales--dos { grid-template-columns: repeat(2, 1fr); }   /* 2 o 4 tarjetas: sin una sola en la última fila */
   .cred { display: flex; flex-direction: column; border: 2px solid var(--acento); background: var(--fondo); }
   .cred__logo { height: 104px; display: flex; align-items: center; justify-content: center; gap: 18px; background: #FFFFFF; border-bottom: 1.5px solid var(--linea); }
   .cred__cuerpo { flex: 1; padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; }
@@ -256,7 +257,7 @@
 <section class="lamina" data-nombre="oratoria">
   <div class="meta"><span>{{ t(s.ui.hoja) }} 05 / {{ t(s.ui.oratoria_comunidad) }}</span><span>{{ s.perfil.oratoria_comunidad|length }} REGISTROS</span></div>
   <h2 class="titulo">{{ t(s.ui.oratoria_comunidad)|capitalize }}</h2>
-  <div class="credenciales">
+  <div class="credenciales{{ ' credenciales--dos' if s.perfil.oratoria_comunidad|length in (2, 4) }}">
     {% for f in s.perfil.oratoria_comunidad %}
     <div class="cred">
       <div class="cred__logo">{% for l in f.logos %}<img src="{{ logos[l].src }}" width="{{ logos[l].ancho }}" height="{{ logos[l].alto }}" alt="">{% endfor %}</div>
