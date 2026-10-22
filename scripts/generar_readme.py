@@ -62,6 +62,19 @@ def unir(partes, sep="; "):
     return sep.join(p for p in partes if p)
 
 
+def estado_formacion(f):
+    """Estado de un programa para el texto alternativo; si va por fases, cada fase con su estado."""
+    if "fases" not in f:
+        return t(f["estado"])
+    return unir(f'{t(fa["nombre"])}, {t(fa["estado"])[:1].lower()}{t(fa["estado"])[1:]}' for fa in f["fases"])
+
+
+def verificaciones(s):
+    """Certificados verificables de formación: el del programa o, si va por fases, el de cada fase."""
+    return [(f'{t(f["institucion"])} · {t(x["nombre"]) if "nombre" in x else t(f["programa"])}', x["verificar"])
+            for f in s["perfil"]["formacion"] for x in (f, *f.get("fases", [])) if "verificar" in x]
+
+
 def textos_alternativos(s):
     """Lo que dice cada lámina, en texto: para lectores de pantalla y para quien no carga imágenes."""
     alt = {
@@ -78,7 +91,7 @@ def textos_alternativos(s):
         "herramientas": "Herramientas. " + unir(f'{oracion(t(g["grupo"]))}: {", ".join(map(t, g["lista"]))}' for g in s["perfil"]["herramientas"])
                         + f'. Idiomas: {", ".join(map(t, s["perfil"]["idiomas"]))}. {oracion(t(s["ui"]["habilidades_blandas"]))}: {t(s["perfil"]["habilidades_blandas"])}',
         "formacion": f'{oracion(t(s["ui"]["formacion_programas"]))}. '
-                     + unir(f'{t(f["institucion"])}: {t(f["programa"])} ({t(f["estado"])})' for f in s["perfil"]["formacion"]) + ".",
+                     + unir(f'{t(f["institucion"])}: {t(f["programa"])} ({estado_formacion(f)})' for f in s["perfil"]["formacion"]) + ".",
         "contacto": f'{t(s["seccion_contacto"]["titulo"])} Correo: {s["contacto"]["correo"]}; LinkedIn: {s["contacto"]["linkedin_txt"]}; '
                     f'CV en PDF; {t(s["contacto"]["ubicacion"])}.',
     }
@@ -96,7 +109,8 @@ def generar_readme(s):
     env = Environment(loader=FileSystemLoader(RAIZ / "plantillas"), autoescape=False,
                       undefined=StrictUndefined, trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True)
     env.filters["t"] = t
-    texto = env.get_template("README.md.j2").render(s=s, t=t, lamina=lamina, serpiente=SERPIENTE)
+    texto = env.get_template("README.md.j2").render(s=s, t=t, lamina=lamina, serpiente=SERPIENTE,
+                                                          verificaciones=verificaciones(s))
     texto = re.sub(r"\n{3,}", "\n\n", texto)  # sin renglones vacíos de más
     (RAIZ / "README.md").write_text(texto, encoding="utf-8")
     print(f"✓ README.md ({len(texto.encode()):,} bytes)")

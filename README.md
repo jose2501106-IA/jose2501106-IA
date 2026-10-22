@@ -39,10 +39,10 @@ Entré a una empresa de distribución como auxiliar administrativo y a los tres 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/formacion-oscuro.webp">
-  <img src="assets/laminas/formacion-claro.webp" width="100%" alt="Formación y programas. Hybridge Education: Ingeniería en Inteligencia Artificial (3.er cuatrimestre de 8); UVEG: Ingeniería Industrial (38% completado); Universidad Anáhuac México Norte: Seminario de IA y Ciencia de Datos (Beca 100% · Santander 2026); Aspire Leaders Program: Programa de liderazgo global fundado por académicos de Harvard (Seleccionado); Oracle Next Education: Inmersión: Agentes de IA para Negocios (Finalizado · 13 oct 2026 · 4 h); Lean Six Sigma Institute: Lean Management (En curso · avalado por The Council for Six Sigma Certification).">
+  <img src="assets/laminas/formacion-claro.webp" width="100%" alt="Formación y programas. Hybridge Education: Ingeniería en Inteligencia Artificial (3.er cuatrimestre de 8); UVEG: Ingeniería Industrial (38% completado); Universidad Anáhuac México Norte: Seminario de IA y Ciencia de Datos (Beca 100% · Santander 2026); Aspire Leaders Program: Programa de liderazgo global fundado por académicos de Harvard (Seleccionado); Oracle Next Education: ONE AI For Business (Inmersión: Agentes de IA para Negocios, finalizada · 13 oct 2026; Fase Tech Builder, en curso · desde oct 2026); Lean Six Sigma Institute: Lean Management (En curso · avalado por The Council for Six Sigma Certification).">
 </picture>
 
-<p align="right"><sub><a href="https://app.aluracursos.com/immersion/certificate/00c74f55-f2d9-4ec7-990c-bcddc214aaa0">Oracle Next Education · Verificar autenticidad →</a></sub></p>
+<p align="right"><sub><a href="https://app.aluracursos.com/immersion/certificate/00c74f55-f2d9-4ec7-990c-bcddc214aaa0">Oracle Next Education · Inmersión: Agentes de IA para Negocios · Verificar autenticidad →</a></sub></p>
 
 <a href="https://jose2501106-ia.github.io/#contacto">
 <picture>

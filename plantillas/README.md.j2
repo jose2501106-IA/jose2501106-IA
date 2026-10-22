@@ -23,8 +23,8 @@
 
 {{ lamina("formacion") }}
 
-{% for f in s.perfil.formacion if f.verificar is defined %}
-<p align="right"><sub><a href="{{ f.verificar }}">{{ t(f.institucion) }} · {{ t(s.ui.verificar) }} →</a></sub></p>
+{% for texto, url in verificaciones %}
+<p align="right"><sub><a href="{{ url }}">{{ texto }} · {{ t(s.ui.verificar) }} →</a></sub></p>
 {% endfor %}
 
 {{ lamina("contacto", s.sitio.url ~ "#contacto") }}
