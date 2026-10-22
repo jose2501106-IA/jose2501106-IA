@@ -77,6 +77,12 @@ def verificaciones(s):
             for f in s["perfil"]["formacion"] for x in (f, *f.get("fases", [])) if "verificar" in x]
 
 
+def documentos(s):
+    """Reconocimientos en PDF publicados en el portafolio: (texto del enlace, URL absoluta)."""
+    return [(f'{t(f["corto"]) if "corto" in f else t(f["institucion"])} · {t(s["ui"]["ver_reconocimiento"])}', s["sitio"]["url"] + f["documento"])
+            for f in s["perfil"]["formacion"] + s["perfil"].get("oratoria_comunidad", []) if "documento" in f]
+
+
 def textos_alternativos(s):
     """Lo que dice cada lámina, en texto: para lectores de pantalla y para quien no carga imágenes."""
     alt = {
@@ -115,7 +121,7 @@ def generar_readme(s):
                       undefined=StrictUndefined, trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True)
     env.filters["t"] = t
     texto = env.get_template("README.md.j2").render(s=s, t=t, lamina=lamina, serpiente=SERPIENTE,
-                                                          verificaciones=verificaciones(s))
+                                                          verificaciones=verificaciones(s), documentos=documentos(s))
     texto = re.sub(r"\n{3,}", "\n\n", texto)  # sin renglones vacíos de más
     (RAIZ / "README.md").write_text(texto, encoding="utf-8")
     print(f"✓ README.md ({len(texto.encode()):,} bytes)")

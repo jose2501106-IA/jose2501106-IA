@@ -29,6 +29,10 @@
 
 {{ lamina("oratoria", s.sitio.url ~ "#perfil") }}
 
+{% for texto, url in documentos %}
+<p align="right"><sub><a href="{{ url }}">{{ texto }} →</a></sub></p>
+{% endfor %}
+
 {{ lamina("contacto", s.sitio.url ~ "#contacto") }}
 
 <p align="center">
