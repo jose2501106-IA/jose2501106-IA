@@ -23,44 +23,14 @@ Entré a una empresa de distribución como auxiliar administrativo y a los tres 
   <img src="assets/laminas/roles-claro.webp" width="100%" alt="Lo que hago, con evidencia. IA y agentes: Agentes con herramientas e integración de modelos de lenguaje (Claude API), del prototipo a la herramienta funcional. Evidencia: P-01, P-02. Automatización de procesos: Automatizo procesos operativos con Python y Apps Script, de la captura de datos a la auditoría diaria. Evidencia: P-03. Mejora continua / Lean: Auditoría diaria de la operación del almacén, mejorada versión tras versión hasta la v7; formación en Lean Management (Lean Six Sigma Institute). Evidencia: P-03. Análisis de datos: Limpieza y análisis con Pandas, y tableros para decidir con números. Evidencia: P-01, P-03.">
 </picture>
 
+<a href="https://jose2501106-ia.github.io/#proyectos">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/proyectos-oscuro.webp">
-  <img src="assets/laminas/proyectos-claro.webp" width="100%" alt="Proyectos que lo demuestran: P-01 AgenteMX (FUNCIONAL); P-02 Neurona Artificial (EN CONSTRUCCIÓN); P-03 Pipeline de auditoría (EN PRODUCCIÓN); P-04 Cuentas Claras (2 PREMIOS).">
-</picture>
-
-<a href="https://github.com/jose2501106-IA/agente-legislativo-mx">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/p-01-oscuro.webp">
-  <img src="assets/laminas/p-01-claro.webp" width="100%" alt="P-01 · AgenteMX. Agente de IA para transparencia legislativa. FUNCIONAL. Responde en lenguaje natural cómo votan los diputados, con datos oficiales y citas a la fuente. Incluye índice de disciplina partidista, detector de contradicciones y radar electoral. 8 herramientas del agente; 10k+ votos individuales; 7 partidos cubiertos. Tecnologías: Claude API, SQLite, Pandas, BeautifulSoup, Streamlit.">
+  <img src="assets/laminas/proyectos-claro.webp" width="100%" alt="Proyectos que lo demuestran. P-01 AgenteMX (FUNCIONAL): Agente de IA para transparencia legislativa. 8 herramientas del agente; 10k+ votos individuales; 7 partidos cubiertos. Tecnologías: Claude API, SQLite, Pandas, BeautifulSoup, Streamlit. P-02 Neurona Artificial (EN CONSTRUCCIÓN): Curso abierto para entender la IA por dentro. 2 lecciones publicadas; 7 lecciones en camino. Tecnologías: HTML, CSS, JavaScript, Sistema de diseño propio. P-03 Pipeline de auditoría (EN PRODUCCIÓN): Empresa de distribución · CDMX. v7 versión en producción. Tecnologías: Python, Apps Script, Google Sheets. Repositorio privado. P-04 Cuentas Claras (2 PREMIOS): Bitácora de fiado cofirmada · Goya Hack 2026. 2.º LUGAR · TRACK POLLAR; 3.er LUGAR · TRACK CONTENIDO. Tecnologías: Stellar, Soroban · Rust, JavaScript, Node.js.">
 </picture>
 </a>
 
-<p align="right"><sub><a href="https://github.com/jose2501106-IA/agente-legislativo-mx">P-01 · Ver repositorio →</a></sub></p>
-
-<a href="https://jose2501106-ia.github.io/NeuronaArtificial/">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/p-02-oscuro.webp">
-  <img src="assets/laminas/p-02-claro.webp" width="100%" alt="P-02 · Neurona Artificial. Curso abierto para entender la IA por dentro. EN CONSTRUCCIÓN. Videos interactivos con laboratorio para entender cómo funciona la inteligencia artificial, de una sola neurona a los agentes que deciden y actúan. Cada lección trae capítulos, subtítulos y un laboratorio para mover cada pieza. 2 lecciones publicadas; 7 lecciones en camino. Tecnologías: HTML, CSS, JavaScript, Sistema de diseño propio.">
-</picture>
-</a>
-
-<p align="right"><sub><a href="https://jose2501106-ia.github.io/NeuronaArtificial/">P-02 · Ver curso →</a> · <a href="https://github.com/jose2501106-IA/NeuronaArtificial">P-02 · Ver repositorio →</a></sub></p>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/p-03-oscuro.webp">
-  <img src="assets/laminas/p-03-claro.webp" width="100%" alt="P-03 · Pipeline de auditoría. Empresa de distribución · CDMX. EN PRODUCCIÓN. Automatiza la auditoría diaria de la operación del almacén con Python y Apps Script. Va en su versión 7 y corre en producción todos los días. v7 versión en producción. Tecnologías: Python, Apps Script, Google Sheets.">
-</picture>
-
-<p align="right"><sub>P-03 · Repositorio privado</sub></p>
-
-<a href="https://github.com/jose2501106-IA/goyahack_cuentas-claras">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/p-04-oscuro.webp">
-  <img src="assets/laminas/p-04-claro.webp" width="100%" alt="P-04 · Cuentas Claras. Bitácora de fiado cofirmada · Goya Hack 2026. 2 PREMIOS. 2.º LUGAR · TRACK POLLAR; 3.er LUGAR · TRACK CONTENIDO, Goya Hack 2026 · CriptoUNAM × Facultad de Ingeniería, UNAM. La bodega registra cada venta a crédito y el cliente la confirma desde su teléfono: nadie anota una deuda solo ni borra el historial. Las reglas las hace cumplir un contrato en Stellar. 3 reglas en el contrato; 2 firmas por nota. Tecnologías: Stellar, Soroban · Rust, JavaScript, Node.js.">
-</picture>
-</a>
-
-<p align="right"><sub><a href="https://github.com/jose2501106-IA/goyahack_cuentas-claras">P-04 · Ver repositorio →</a></sub></p>
+<p align="right"><sub><a href="https://github.com/jose2501106-IA/agente-legislativo-mx">P-01 AgenteMX →</a> · <a href="https://jose2501106-ia.github.io/NeuronaArtificial/">P-02 Neurona Artificial →</a> · P-03 Pipeline de auditoría (repositorio privado) · <a href="https://github.com/jose2501106-IA/goyahack_cuentas-claras">P-04 Cuentas Claras →</a></sub></p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/herramientas-oscuro.webp">

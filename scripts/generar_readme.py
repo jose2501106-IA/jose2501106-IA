@@ -9,7 +9,8 @@ Requiere: jinja2, pyyaml, pillow y playwright con Chromium (ver scripts/requisit
 
 Cada sección del README es una «lámina» con el estilo de plano del portafolio,
 en versión clara y oscura (GitHub muestra la que corresponde al tema de quien
-visita). Lo que se necesita tocar (enlaces a proyectos, CV y contacto) también
+visita). Los proyectos van en una sola lámina compacta: las tarjetas completas las
+muestran los repos fijados del perfil. Lo que se toca (enlaces, CV y contacto) también
 queda como texto, y cada lámina lleva un texto alternativo con su contenido.
 
 Del portafolio solo se leen data/perfil.yml, las fuentes y los logos. Nada se
@@ -67,8 +68,12 @@ def textos_alternativos(s):
                       + unir(f'{t(c["valor"])} {t(c["texto"])} ({c["codigo"]})' for c in s["portada"]["cifras"]) + ".",
         "roles": f'{t(s["secciones"]["roles"]["titulo"])}. '
                  + unir((f'{t(r["titulo"])}: {t(r["texto"])} Evidencia: {", ".join(r["evidencia"])}.' for r in s["roles"]), " "),
-        "proyectos": f'{t(s["secciones"]["proyectos"]["titulo"])}: '
-                     + unir(f'{p["codigo"]} {t(p["nombre"])} ({t(p["estado"])})' for p in s["proyectos"]) + ".",
+        "proyectos": f'{t(s["secciones"]["proyectos"]["titulo"])}. '
+                     + unir((f'{p["codigo"]} {t(p["nombre"])} ({t(p["estado"])}): {t(p["subtitulo"])}. '
+                             + (unir(t(d["titulo"]) for d in p["distinciones"]["premios"]) if "distinciones" in p
+                                else unir(f'{t(c["valor"])} {t(c["texto"])}' for c in p["cifras"]))
+                             + f'. Tecnologías: {", ".join(map(t, p["tecnologias"]))}.'
+                             + ("" if p["enlaces"] else f' {t(s["ui"]["privado"])}.') for p in s["proyectos"]), " "),
         "herramientas": "Herramientas. " + unir(f'{oracion(t(g["grupo"]))}: {", ".join(map(t, g["lista"]))}' for g in s["perfil"]["herramientas"])
                         + f'. Idiomas: {", ".join(map(t, s["perfil"]["idiomas"]))}. {oracion(t(s["ui"]["habilidades_blandas"]))}: {t(s["perfil"]["habilidades_blandas"])}',
         "formacion": f'{oracion(t(s["ui"]["formacion_programas"]))}. '
@@ -76,11 +81,6 @@ def textos_alternativos(s):
         "contacto": f'{t(s["seccion_contacto"]["titulo"])} Correo: {s["contacto"]["correo"]}; LinkedIn: {s["contacto"]["linkedin_txt"]}; '
                     f'CV en PDF; {t(s["contacto"]["ubicacion"])}.',
     }
-    for p in s["proyectos"]:
-        premios = unir(t(d["titulo"]) for d in p["distinciones"]["premios"]) + ", " + t(p["distinciones"]["texto"]) + ". " if "distinciones" in p else ""
-        alt[p["codigo"].lower()] = (f'{p["codigo"]} · {t(p["nombre"])}. {t(p["subtitulo"])}. {t(p["estado"])}. {premios}{t(p["descripcion"])} '
-                                    + unir(f'{t(c["valor"])} {t(c["texto"])}' for c in p["cifras"]) + ". "
-                                    + "Tecnologías: " + ", ".join(map(t, p["tecnologias"])) + ".")
     return alt
 
 
@@ -107,6 +107,7 @@ async def generar_laminas(s, portafolio, nombres):
                      "ancho": round(ancho * TAMANO_LOGO), "alto": round(alto * TAMANO_LOGO)}
              for clave, (archivo, ancho, alto) in LOGOS.items()}
     env = Environment(loader=FileSystemLoader(RAIZ / "plantillas"), autoescape=True, undefined=StrictUndefined)
+    env.filters["t"] = t
     plantilla = env.get_template("laminas.html.j2")
     LAMINAS.mkdir(parents=True, exist_ok=True)
     for viejo in LAMINAS.glob("*.webp"):

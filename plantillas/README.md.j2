@@ -15,13 +15,9 @@
 
 {{ lamina("roles") }}
 
-{{ lamina("proyectos") }}
-{% for p in s.proyectos %}
+{{ lamina("proyectos", s.sitio.url ~ "#proyectos") }}
 
-{{ lamina(p.codigo|lower, p.enlaces[0].url if p.enlaces else none) }}
-
-<p align="right"><sub>{% if p.enlaces %}{% for l in p.enlaces %}<a href="{{ l.url }}">{{ p.codigo }} · {{ t(l.texto) }} →</a>{{ " · " if not loop.last }}{% endfor %}{% else %}{{ p.codigo }} · {{ t(s.ui.privado) }}{% endif %}</sub></p>
-{% endfor %}
+<p align="right"><sub>{% for p in s.proyectos %}{% if p.enlaces %}<a href="{{ p.enlaces[0].url }}">{{ p.codigo }} {{ t(p.nombre) }} →</a>{% else %}{{ p.codigo }} {{ t(p.nombre) }} ({{ t(s.ui.privado)|lower }}){% endif %}{{ " · " if not loop.last }}{% endfor %}</sub></p>
 
 {{ lamina("herramientas") }}
 
