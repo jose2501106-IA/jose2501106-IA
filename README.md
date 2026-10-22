@@ -34,7 +34,7 @@ Entré a una empresa de distribución como auxiliar administrativo y a los tres 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/herramientas-oscuro.webp">
-  <img src="assets/laminas/herramientas-claro.webp" width="100%" alt="Herramientas. Programación: Python, JavaScript, TypeScript, SQL, Bash; IA y datos: Claude API, Claude Code, OpenAI, Pandas, NumPy, Streamlit; Automatización: Apps Script, Google Workspace, Excel avanzado, GitHub Actions; Cloud y hardware: AWS, Docker, Linux, Arduino; Procesos: Lean Six Sigma, DMAIC. Idiomas: Español · nativo, Inglés · A2, en formación (beca Bécalos). Habilidades blandas: Comunicación: dos competencias nacionales de oratoria y Parlamento Juvenil. Liderazgo: Aspire Leaders Program. Ritmo de operación real: decisiones diarias en un negocio con clientes y proveedores. Comunidad: embajador del Programa de Embajadores de Stellar en Latinoamérica (BAF), desde octubre de 2026.">
+  <img src="assets/laminas/herramientas-claro.webp" width="100%" alt="Herramientas. Programación: Python, JavaScript, TypeScript, SQL, Bash; IA y datos: Claude API, Claude Code, OpenAI, Pandas, NumPy, Streamlit; Automatización: Apps Script, Google Workspace, Excel avanzado, GitHub Actions; Cloud y hardware: AWS, Docker, Linux, Arduino; Procesos: Lean Six Sigma, DMAIC. Idiomas: Español · nativo, Inglés · A2, en formación (beca Bécalos). Habilidades blandas: Comunicación: dos concursos nacionales de oratoria (2026). Liderazgo: Aspire Leaders Program. Ritmo de operación real: decisiones diarias en un negocio con clientes y proveedores.">
 </picture>
 
 <picture>
@@ -43,6 +43,13 @@ Entré a una empresa de distribución como auxiliar administrativo y a los tres 
 </picture>
 
 <p align="right"><sub><a href="https://app.aluracursos.com/immersion/certificate/00c74f55-f2d9-4ec7-990c-bcddc214aaa0">Oracle Next Education · Inmersión: Agentes de IA para Negocios · Verificar autenticidad →</a></sub></p>
+
+<a href="https://jose2501106-ia.github.io/#perfil">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/oratoria-oscuro.webp">
+  <img src="assets/laminas/oratoria-claro.webp" width="100%" alt="Oratoria y comunidad. Senado de la República: Certamen Nacional de Oratoria “Ricardo Flores Magón” (Febrero 2026); Congreso del Estado de Oaxaca: Concurso Nacional de Oratoria “Benito Juárez García” (Marzo 2026); Programa de Embajadores de Stellar: Embajador en Latinoamérica · coordinado por BAF (Desde octubre de 2026).">
+</picture>
+</a>
 
 <a href="https://jose2501106-ia.github.io/#contacto">
 <picture>

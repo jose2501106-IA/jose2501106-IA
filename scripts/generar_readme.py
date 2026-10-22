@@ -43,6 +43,7 @@ LOGOS = {
     "medalla-2": ("medalla-2.svg", 37, 52), "medalla-3": ("medalla-3.svg", 37, 52),
     "hybridge": ("hybridge.svg", 110, 19), "uveg": ("uveg.svg", 78, 21), "anahuac": ("anahuac.svg", 32, 32),
     "aspire": ("aspire.svg", 80, 28), "one": ("one.svg", 62, 32), "oracle": ("oracle.svg", 104, 13), "lssi": ("lssi.svg", 78, 32),
+    "stellar": ("stellar.svg", 96, 24), "baf": ("baf.webp", 56, 28), "oratoria": ("oratoria.svg", 32, 32),
 }
 TAMANO_LOGO = 1.7       # en las tarjetas de formación los logos van más grandes que en el portafolio
 
@@ -90,9 +91,11 @@ def textos_alternativos(s):
                              + ("" if p["enlaces"] else f' {t(s["ui"]["privado"])}.') for p in s["proyectos"]), " "),
         "herramientas": "Herramientas. " + unir(f'{oracion(t(g["grupo"]))}: {", ".join(map(t, g["lista"]))}' for g in s["perfil"]["herramientas"])
                         + f'. Idiomas: {", ".join(map(t, s["perfil"]["idiomas"]))}. {oracion(t(s["ui"]["habilidades_blandas"]))}: {t(s["perfil"]["habilidades_blandas"])}'
-                        + (f' {t(s["perfil"]["comunidad"])}' if "comunidad" in s["perfil"] else ""),
+,
         "formacion": f'{oracion(t(s["ui"]["formacion_programas"]))}. '
                      + unir(f'{t(f["institucion"])}: {t(f["programa"])} ({estado_formacion(f)})' for f in s["perfil"]["formacion"]) + ".",
+        "oratoria": f'{oracion(t(s["ui"]["oratoria_comunidad"]))}. '
+                    + unir(f'{t(f["institucion"])}: {t(f["programa"])} ({t(f["estado"])})' for f in s["perfil"]["oratoria_comunidad"]) + ".",
         "contacto": f'{t(s["seccion_contacto"]["titulo"])} Correo: {s["contacto"]["correo"]}; LinkedIn: {s["contacto"]["linkedin_txt"]}; '
                     f'CV en PDF; {t(s["contacto"]["ubicacion"])}.',
     }

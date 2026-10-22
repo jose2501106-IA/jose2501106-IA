@@ -224,7 +224,7 @@
     {% endfor %}
     <div class="grupo"><span class="etiqueta">{{ t(s.ui.idiomas) }}</span><div class="chips">{% for i in s.perfil.idiomas %}<span class="chip">{{ t(i) }}</span>{% endfor %}</div></div>
   </div>
-  <div class="blandas"><span class="etiqueta">{{ t(s.ui.habilidades_blandas) }}</span><p>{{ t(s.perfil.habilidades_blandas) }}{% if s.perfil.comunidad is defined %} {{ t(s.perfil.comunidad) }}{% endif %}</p></div>
+  <div class="blandas"><span class="etiqueta">{{ t(s.ui.habilidades_blandas) }}</span><p>{{ t(s.perfil.habilidades_blandas) }}</p></div>
 </section>
 
 {# ═════════ Formación ═════════ #}
@@ -252,9 +252,27 @@
   </div>
 </section>
 
+{# ═════════ Oratoria y comunidad ═════════ #}
+<section class="lamina" data-nombre="oratoria">
+  <div class="meta"><span>{{ t(s.ui.hoja) }} 05 / {{ t(s.ui.oratoria_comunidad) }}</span><span>{{ s.perfil.oratoria_comunidad|length }} REGISTROS</span></div>
+  <h2 class="titulo">{{ t(s.ui.oratoria_comunidad)|capitalize }}</h2>
+  <div class="credenciales">
+    {% for f in s.perfil.oratoria_comunidad %}
+    <div class="cred">
+      <div class="cred__logo">{% for l in f.logos %}<img src="{{ logos[l].src }}" width="{{ logos[l].ancho }}" height="{{ logos[l].alto }}" alt="">{% endfor %}</div>
+      <div class="cred__cuerpo">
+        <h3>{{ t(f.institucion) }}</h3>
+        <p>{{ t(f.programa) }}</p>
+        <span class="estado-c">{{ t(f.estado) }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
 {# ═════════ Contacto ═════════ #}
 <section class="lamina contacto" data-nombre="contacto">
-  <div class="meta"><span>{{ t(s.ui.hoja) }} 05 / {{ t(s.secciones.contacto) }}</span><span>REV {{ s.sitio.anio }}</span></div>
+  <div class="meta"><span>{{ t(s.ui.hoja) }} 06 / {{ t(s.secciones.contacto) }}</span><span>REV {{ s.sitio.anio }}</span></div>
   <div class="contacto__cuerpo">
     <div class="contacto__izq">
       <h2>{{ t(s.seccion_contacto.titulo) }}</h2>
