@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es" data-tema="{{ tema }}">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Space Mono"; font-weight: 400; src: url("{{ base }}assets/fuentes/space-mono-400.woff2") format("woff2"); }
+  @font-face { font-family: "Space Mono"; font-weight: 700; src: url("{{ base }}assets/fuentes/space-mono-700.woff2") format("woff2"); }
+  @font-face { font-family: "Titillium Web"; font-weight: 400; src: url("{{ base }}assets/fuentes/titillium-web-400.woff2") format("woff2"); }
+  @font-face { font-family: "Titillium Web"; font-weight: 600; src: url("{{ base }}assets/fuentes/titillium-web-600.woff2") format("woff2"); }
+
+  /* Tema claro: el plano del portafolio */
+  :root {
+    --fondo: #FFFFFF; --fondo-2: #F7F9FD; --rej-1: #E3E9F5; --rej-2: #F3F6FB;
+    --tinta: #0B1F4A; --texto: #2A3142; --texto-2: #4A5468; --acento: #0046B8; --vivo: #1166F2; --gris: #5A6F9A;
+    --linea: #C9D4E8; --cota: #9DB3DE; --marco: #0046B8;
+    --chip-borde: #9DB3DE; --chip-fondo: #FFFFFF; --boton-texto: #FFFFFF;
+    --mono: "Space Mono", monospace; --sans: "Titillium Web", sans-serif;
+  }
+  /* Tema oscuro: plano azul marino */
+  :root[data-tema="oscuro"] {
+    --fondo: #0B1F4A; --fondo-2: #0F2858; --rej-1: rgba(157, 179, 222, .18); --rej-2: rgba(157, 179, 222, .07);
+    --tinta: #F3F7FF; --texto: #DCE4F5; --texto-2: #B4C3E2; --acento: #8FB4FF; --vivo: #8FB4FF; --gris: #9DB3DE;
+    --linea: rgba(157, 179, 222, .35); --cota: #5A6F9A; --marco: rgba(143, 180, 255, .55);
+    --chip-borde: rgba(157, 179, 222, .5); --chip-fondo: #0B1F4A; --boton-texto: #0B1F4A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #777; padding: 40px; display: flex; flex-direction: column; gap: 40px; width: 1280px; }
+  .lamina {
+    position: relative; width: 1200px; background-color: var(--fondo); color: var(--texto); font-family: var(--sans);
+    background-image: linear-gradient(var(--rej-1) 1px, transparent 1px), linear-gradient(90deg, var(--rej-1) 1px, transparent 1px),
+                      linear-gradient(var(--rej-2) 1px, transparent 1px), linear-gradient(90deg, var(--rej-2) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    border: 2px solid var(--marco); padding: 44px 56px 52px;
+  }
+  .opaco { background: var(--fondo); }
+
+  /* Cabecera de cada lámina */
+  .meta { display: flex; justify-content: space-between; font: 14px var(--mono); letter-spacing: 2px; color: var(--gris); }
+  .titulo { margin-top: 16px; padding-bottom: 18px; border-bottom: 2px solid var(--acento); font: 700 42px/1.1 var(--mono); letter-spacing: -1px; color: var(--tinta); }
+  .titulo small { display: block; margin-top: 10px; font: 600 20px/1.3 var(--sans); letter-spacing: 0; color: var(--texto-2); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip { padding: 7px 13px; border: 1.5px solid var(--chip-borde); background: var(--chip-fondo); font: 16px var(--mono); color: var(--tinta); }
+  .etiqueta { font: 13px var(--mono); letter-spacing: 2px; color: var(--gris); }
+
+  /* ───────── Encabezado: identidad + cifras ───────── */
+  .enc { height: 630px; padding: 0; border: 0; }
+  .enc .meta { position: absolute; left: 64px; right: 64px; top: 40px; font-size: 15px; }
+  .enc .texto { position: absolute; left: 64px; top: 104px; width: 600px; display: flex; flex-direction: column; gap: 18px; }
+  .enc .kicker { font: 17px var(--mono); letter-spacing: 3px; color: var(--acento); }
+  .cota { display: flex; align-items: center; gap: 10px; font: 12px var(--mono); color: var(--gris); }
+  .cota i { flex: 1; border-top: 1.5px dashed var(--cota); }
+  .enc h1 { font: 700 96px/.96 var(--mono); letter-spacing: -3px; color: var(--tinta); }
+  .enc .sub { font-size: 34px; line-height: 1.2; font-weight: 600; color: var(--tinta); text-wrap: balance; }
+  .enc .bajada { font-size: 21px; line-height: 1.35; font-weight: 600; color: var(--vivo); text-wrap: balance; }
+  .cifras { position: absolute; right: 64px; top: 104px; width: 452px; padding: 18px; }
+  .cifras .esq { position: absolute; width: 22px; height: 22px; border: 0 solid var(--acento); }
+  .ti { top: 0; left: 0; border-top-width: 2.5px !important; border-left-width: 2.5px !important; }
+  .td { top: 0; right: 0; border-top-width: 2.5px !important; border-right-width: 2.5px !important; }
+  .bi { bottom: 0; left: 0; border-bottom-width: 2.5px !important; border-left-width: 2.5px !important; }
+  .bd { bottom: 0; right: 0; border-bottom-width: 2.5px !important; border-right-width: 2.5px !important; }
+  .cifras__rej { display: grid; grid-template-columns: 1fr 1fr; border: 2px solid var(--acento); background: var(--fondo); }
+  .cifra { padding: 16px 18px 18px; min-height: 196px; display: flex; flex-direction: column; gap: 6px; border-color: var(--linea); }
+  .cifra:nth-child(odd) { border-right: 1.5px solid var(--linea); }
+  .cifra:nth-child(-n+2) { border-bottom: 1.5px solid var(--linea); }
+  .cifra .cod { font: 12px var(--mono); letter-spacing: 2px; color: var(--gris); }
+  .cifra .val { font: 700 60px/1 var(--mono); letter-spacing: -2px; color: var(--acento); }
+  .cifra .txt { font-size: 16px; line-height: 1.3; font-weight: 600; color: var(--texto); text-wrap: pretty; }
+  .cifras__pie { margin-top: 10px; text-align: center; }
+  .barra { position: absolute; left: 0; right: 0; bottom: 0; height: 64px; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; background: #0046B8; color: #FFFFFF; font: 700 19px var(--mono); letter-spacing: 1px; }
+  .barra span:last-child { font-weight: 400; font-size: 15px; letter-spacing: 2px; opacity: .85; }
+
+  /* ───────── Roles 2×2 ───────── */
+  .roles { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .rol { display: flex; flex-direction: column; border: 2px solid var(--acento); background: var(--fondo); }
+  .rol__cab { display: flex; justify-content: space-between; padding: 11px 18px; border-bottom: 1.5px solid var(--acento); font: 14px var(--mono); letter-spacing: 2px; color: var(--vivo); }
+  .rol__cuerpo { flex: 1; padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .rol h3 { font: 700 25px/1.2 var(--mono); color: var(--tinta); }
+  .rol p { font-size: 19px; line-height: 1.5; color: var(--texto); text-wrap: pretty; }
+  .rol__pie { margin: 0 20px; padding: 13px 0 16px; border-top: 1.5px dashed var(--cota); display: flex; align-items: center; gap: 10px; }
+  .evid { padding: 3px 10px; border: 1.5px solid var(--acento); font: 700 15px var(--mono); color: var(--acento); }
+  .como { margin-top: 26px; font: 15px var(--mono); color: var(--gris); }
+
+  /* ───────── Proyectos ───────── */
+  .indice { margin-top: 26px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .indice div { padding: 14px 16px; border: 2px solid var(--acento); background: var(--fondo); }
+  .indice b { display: block; font: 700 22px var(--mono); color: var(--tinta); margin-top: 6px; }
+  .indice span { display: block; margin-top: 8px; font: 13px var(--mono); letter-spacing: 1.5px; color: var(--vivo); }
+  .proy { padding: 0; }
+  .proy__cab { display: flex; justify-content: space-between; align-items: center; padding: 16px 28px; border-bottom: 2px solid var(--acento); background: var(--fondo); font: 15px var(--mono); letter-spacing: 2px; color: var(--acento); }
+  .estado { padding: 4px 12px; border: 1.5px solid var(--acento); font-weight: 700; }
+  .proy__cuerpo { display: grid; grid-template-columns: 1fr 360px; gap: 40px; padding: 30px 28px 30px; }
+  .proy h3 { font: 700 44px/1.05 var(--mono); letter-spacing: -1.5px; color: var(--tinta); }
+  .proy__sub { margin-top: 10px; font-size: 23px; line-height: 1.3; font-weight: 600; color: var(--vivo); }
+  .proy__desc { margin-top: 16px; font-size: 20px; line-height: 1.55; color: var(--texto); text-wrap: pretty; }
+  .proy__dem { margin-top: 16px; font-size: 18px; line-height: 1.45; font-weight: 600; color: var(--acento); }
+  .proy__dem .etiqueta { margin-right: 8px; }
+  .proy .chips { margin-top: 20px; }
+  .proy .chip { border-style: dashed; }
+  .proy__der { display: flex; flex-direction: column; gap: 14px; }
+  .dato { padding: 16px 20px; border: 2px solid var(--acento); background: var(--fondo); }
+  .dato .val { font: 700 54px/1 var(--mono); letter-spacing: -2px; color: var(--acento); }
+  .dato .txt { margin-top: 6px; font-size: 18px; line-height: 1.3; font-weight: 600; color: var(--texto); }
+  .premios { padding: 16px 18px; border: 2px dashed var(--acento); background: var(--fondo); display: flex; flex-direction: column; gap: 12px; }
+  .premio { display: flex; align-items: center; gap: 14px; }
+  .medalla { flex: none; width: 52px; height: 64px; display: grid; place-items: center; background: #FFFFFF; border: 1.5px solid var(--linea); }
+  .medalla img { width: 32px; height: 45px; }
+  .premio b { font: 700 16px/1.3 var(--mono); letter-spacing: 1px; color: var(--tinta); }
+  .premios p { font: 13px/1.4 var(--mono); letter-spacing: .5px; color: var(--gris); }
+  .datos-fila { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .datos-fila .dato .val { font-size: 44px; }
+  .proy__pie { display: flex; justify-content: space-between; align-items: center; padding: 16px 28px; border-top: 1.5px dashed var(--cota); background: var(--fondo); font: 700 18px var(--mono); color: var(--acento); }
+  .proy__pie span:last-child { font-weight: 400; font-size: 15px; color: var(--gris); }
+
+  /* ───────── Herramientas ───────── */
+  .grupos { margin-top: 28px; display: flex; flex-direction: column; }
+  .grupo { display: grid; grid-template-columns: 250px 1fr; gap: 20px; align-items: center; padding: 16px 0; border-bottom: 1.5px solid var(--linea); }
+  .grupo:last-child { border-bottom: 0; }
+  .grupo .etiqueta { font-size: 14px; color: var(--acento); font-weight: 700; }
+  .blandas { margin-top: 22px; padding: 18px 22px; border: 2px dashed var(--acento); background: var(--fondo); }
+  .blandas p { margin-top: 8px; font-size: 19px; line-height: 1.5; color: var(--texto); }
+
+  /* ───────── Formación 3×2 ───────── */
+  .credenciales { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .cred { display: flex; flex-direction: column; border: 2px solid var(--acento); background: var(--fondo); }
+  .cred__logo { height: 104px; display: flex; align-items: center; justify-content: center; gap: 18px; background: #FFFFFF; border-bottom: 1.5px solid var(--linea); }
+  .cred__cuerpo { flex: 1; padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .cred h3 { font: 700 18px/1.25 var(--mono); color: var(--tinta); }
+  .cred p { font-size: 18px; line-height: 1.4; color: var(--texto); text-wrap: pretty; }
+  .cred .estado-c { margin-top: auto; padding-top: 8px; font: 13px/1.45 var(--mono); letter-spacing: .5px; color: var(--gris); }
+  .cred .verif { font: 700 13px var(--mono); letter-spacing: 1px; color: var(--acento); }
+  .idiomas { margin-top: 20px; display: flex; gap: 14px; align-items: center; }
+
+  /* ───────── Contacto ───────── */
+  .contacto { padding-bottom: 0; }
+  .contacto__cuerpo { margin-top: 30px; display: grid; grid-template-columns: 1fr 520px; gap: 40px; padding-bottom: 104px; }
+  .contacto h2 { font: 700 38px/1.15 var(--mono); letter-spacing: -1px; color: var(--tinta); text-wrap: balance; }
+  .contacto__izq p { margin-top: 14px; font-size: 21px; color: var(--texto); }
+  .botones { margin-top: 26px; display: flex; gap: 14px; }
+  .boton { padding: 14px 22px; font: 700 17px var(--mono); border: 2px solid var(--acento); color: var(--acento); background: var(--fondo); }
+  .boton.lleno { background: var(--acento); color: var(--boton-texto); }
+  .filas { border: 2px solid var(--acento); background: var(--fondo); }
+  .fila { display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center; padding: 17px 20px; border-bottom: 1.5px solid var(--linea); }
+  .fila:last-child { border-bottom: 0; }
+  .fila b { font: 600 19px var(--sans); color: var(--tinta); }
+</style>
+</head>
+<body>
+
+{# ═════════ Encabezado ═════════ #}
+<section class="lamina enc" data-nombre="encabezado">
+  <div class="meta"><span>{{ t(s.ui.hoja) }} 00 / PERFIL</span><span>{{ t(s.ui.escala) }} 1:1 · REV {{ s.sitio.anio }}</span></div>
+  <div class="texto">
+    <div class="kicker">{{ t(s.portada.linea_superior) }}</div>
+    <div>
+      <div class="cota"><span>y 000</span><i></i></div>
+      <h1>{{ s.sitio.nombre_h1[0] }}<br>{{ s.sitio.nombre_h1[1] }}</h1>
+      <div class="cota" style="margin-top:8px"><span>y 196</span><i></i></div>
+    </div>
+    <div class="sub">{{ t(s.portada.subtitulo) }}</div>
+    <div class="bajada">{{ t(s.portada.bajada)|replace(" · ", "&nbsp;· "|safe) }}</div>
+  </div>
+  <div class="cifras">
+    <span class="esq ti"></span><span class="esq td"></span><span class="esq bi"></span><span class="esq bd"></span>
+    <div class="cifras__rej">
+      {% for c in s.portada.cifras %}
+      <div class="cifra"><span class="cod">{{ c.codigo }}</span><span class="val">{{ t(c.valor) }}</span><span class="txt">{{ t(c.texto) }}</span></div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="barra"><span>{{ dominio }}</span><span>ES · EN</span></div>
+</section>
+
+{# ═════════ Roles ═════════ #}
+<section class="lamina" data-nombre="roles">
+  <div class="meta"><span>{{ t(s.ui.hoja) }} 01 / {{ t(s.secciones.roles) }}</span><span>R-01 — R-0{{ s.roles|length }}</span></div>
+  <h2 class="titulo">{{ t(s.secciones.roles.titulo) }}</h2>
+  <div class="roles">
+    {% for r in s.roles %}
+    <div class="rol">
+      <div class="rol__cab"><span>{{ r.codigo }}</span><span>+</span></div>
+      <div class="rol__cuerpo"><h3>{{ t(r.titulo) }}</h3><p>{{ t(r.texto) }}</p></div>
+      <div class="rol__pie"><span class="etiqueta">{{ t(s.ui.evidencia) }}</span>{% for e in r.evidencia %}<span class="evid">{{ e }}</span>{% endfor %}</div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="como">{{ t(s.como_trabajo) }}</p>
+</section>
+
+{# ═════════ Proyectos: cabecera e índice ═════════ #}
+<section class="lamina" data-nombre="proyectos">
+  <div class="meta"><span>{{ t(s.ui.hoja) }} 02 / {{ t(s.secciones.proyectos) }}</span><span>P-01 — P-0{{ s.proyectos|length }}</span></div>
+  <h2 class="titulo">{{ t(s.secciones.proyectos.titulo) }}</h2>
+  <div class="indice">
+    {% for p in s.proyectos %}
+    <div><span class="etiqueta">{{ p.codigo }}</span><b>{{ t(p.nombre) }}</b><span>{{ t(p.estado) }}</span></div>
+    {% endfor %}
+  </div>
+</section>
+
+{# ═════════ Una tarjeta por proyecto ═════════ #}
+{% for p in s.proyectos %}
+<section class="lamina proy" data-nombre="{{ p.codigo|lower }}">
+  <div class="proy__cab">
+    <span>FIG. {{ "%02d"|format(loop.index) }} — {% for c in p.categorias %}{{ t(s.categorias[c].fig) }}{{ " · " if not loop.last }}{% endfor %}</span>
+    <span class="estado">{{ t(p.estado) }}</span>
+  </div>
+  <div class="proy__cuerpo">
+    <div>
+      <span class="etiqueta">{{ p.codigo }}</span>
+      <h3 style="margin-top:6px">{{ t(p.nombre) }}</h3>
+      <p class="proy__sub">{{ t(p.subtitulo) }}</p>
+      <p class="proy__desc">{{ t(p.descripcion) }}</p>
+      <p class="proy__dem"><span class="etiqueta">{{ t(s.ui.demuestra) }}</span>{{ t(p.demuestra) }}</p>
+      <div class="chips">{% for tec in p.tecnologias %}<span class="chip">{{ t(tec) }}</span>{% endfor %}</div>
+    </div>
+    <div class="proy__der">
+      {% if p.distinciones is defined %}
+      <div class="premios">
+        {% for d in p.distinciones.premios %}
+        <div class="premio"><span class="medalla"><img src="{{ logos[d.medalla].src }}" alt=""></span><b>{{ t(d.titulo) }}</b></div>
+        {% endfor %}
+        <p>{{ t(p.distinciones.texto) }}</p>
+      </div>
+      <div class="datos-fila">
+        {% for c in p.cifras %}<div class="dato"><div class="val">{{ t(c.valor) }}</div><div class="txt">{{ t(c.texto) }}</div></div>{% endfor %}
+      </div>
+      {% else %}
+      {% for c in p.cifras %}<div class="dato"><div class="val">{{ t(c.valor) }}</div><div class="txt">{{ t(c.texto) }}</div></div>{% endfor %}
+      {% endif %}
+    </div>
+  </div>
+  <div class="proy__pie">
+    {% if p.enlaces %}
+    <span>{% for l in p.enlaces %}{{ t(l.texto) }} →{{ "   ·   " if not loop.last }}{% endfor %}</span>
+    <span>{{ p.enlaces[-1].url|replace("https://", "") }}</span>
+    {% else %}
+    <span style="color: var(--gris)">{{ t(s.ui.privado) }}</span><span></span>
+    {% endif %}
+  </div>
+</section>
+{% endfor %}
+
+{# ═════════ Herramientas ═════════ #}
+<section class="lamina" data-nombre="herramientas">
+  <div class="meta"><span>{{ t(s.ui.hoja) }} 03 / {{ t(s.ui.herramientas) }}</span><span>STACK</span></div>
+  <h2 class="titulo">{{ t(s.ui.herramientas)|capitalize }}</h2>
+  <div class="grupos">
+    {% for g in s.perfil.herramientas %}
+    <div class="grupo"><span class="etiqueta">{{ t(g.grupo) }}</span><div class="chips">{% for h in g.lista %}<span class="chip">{{ t(h) }}</span>{% endfor %}</div></div>
+    {% endfor %}
+    <div class="grupo"><span class="etiqueta">{{ t(s.ui.idiomas) }}</span><div class="chips">{% for i in s.perfil.idiomas %}<span class="chip">{{ t(i) }}</span>{% endfor %}</div></div>
+  </div>
+  <div class="blandas"><span class="etiqueta">{{ t(s.ui.habilidades_blandas) }}</span><p>{{ t(s.perfil.habilidades_blandas) }}</p></div>
+</section>
+
+{# ═════════ Formación ═════════ #}
+<section class="lamina" data-nombre="formacion">
+  <div class="meta"><span>{{ t(s.ui.hoja) }} 04 / {{ t(s.secciones.perfil) }}</span><span>{{ s.perfil.formacion|length }} PROGRAMAS</span></div>
+  <h2 class="titulo">{{ t(s.ui.formacion_programas)|capitalize }}</h2>
+  <div class="credenciales">
+    {% for f in s.perfil.formacion %}
+    <div class="cred">
+      <div class="cred__logo">{% for l in f.logos %}<img src="{{ logos[l].src }}" width="{{ logos[l].ancho }}" height="{{ logos[l].alto }}" alt="">{% endfor %}</div>
+      <div class="cred__cuerpo">
+        <h3>{{ t(f.institucion) }}</h3>
+        <p>{{ t(f.programa) }}</p>
+        <span class="estado-c">{{ t(f.estado) }}</span>
+        {% if f.verificar is defined %}<span class="verif">{{ t(s.ui.verificar)|upper }} ↗</span>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{# ═════════ Contacto ═════════ #}
+<section class="lamina contacto" data-nombre="contacto">
+  <div class="meta"><span>{{ t(s.ui.hoja) }} 05 / {{ t(s.secciones.contacto) }}</span><span>REV {{ s.sitio.anio }}</span></div>
+  <div class="contacto__cuerpo">
+    <div class="contacto__izq">
+      <h2>{{ t(s.seccion_contacto.titulo) }}</h2>
+      <p>{{ t(s.seccion_contacto.texto) }}</p>
+      <div class="botones"><span class="boton lleno">{{ t(s.seccion_contacto.boton_correo) }}</span><span class="boton">{{ t(s.seccion_contacto.boton_linkedin) }}</span></div>
+    </div>
+    <div class="filas">
+      <div class="fila"><span class="etiqueta">{{ t(s.seccion_contacto.filas.correo) }}</span><b>{{ s.contacto.correo }}</b></div>
+      <div class="fila"><span class="etiqueta">{{ t(s.seccion_contacto.filas.linkedin) }}</span><b>{{ s.contacto.linkedin_txt }}</b></div>
+      <div class="fila"><span class="etiqueta">{{ t(s.seccion_contacto.filas.cv) }}</span><b>{{ t(s.cv.boton) }}</b></div>
+      <div class="fila"><span class="etiqueta">{{ t(s.seccion_contacto.filas.ubicacion) }}</span><b>{{ t(s.contacto.ubicacion) }}</b></div>
+    </div>
+  </div>
+  <div class="barra"><span>{{ dominio }}</span><span>ES · EN</span></div>
+</section>
+
+</body>
+</html>

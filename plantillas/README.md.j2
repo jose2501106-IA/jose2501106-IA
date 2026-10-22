@@ -1,11 +1,6 @@
 <!-- Generado por scripts/generar_readme.py desde data/perfil.yml del portafolio. No lo edites a mano: cambia perfil.yml y vuelve a generar. -->
 
-<a href="{{ s.sitio.url }}">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-oscuro.jpg">
-    <img src="assets/banner-claro.jpg" width="100%" alt="{{ t(s.sitio.nombre) }} · {{ t(s.portada.subtitulo) }} {{ t(s.portada.bajada) }}.">
-  </picture>
-</a>
+{{ lamina("encabezado", s.sitio.url) }}
 
 <p align="center">
   <a href="{{ s.sitio.url }}"><b>Portafolio</b></a> ·
@@ -18,65 +13,32 @@
 
 {{ t(s.portada.historia) }}
 
-## {{ t(s.secciones.roles.titulo) }}
+{{ lamina("roles") }}
 
-{% for r in s.roles %}
-- **{{ t(r.titulo) }}.** {{ t(r.texto) }} <sub>{{ t(s.ui.evidencia) }} {% for e in r.evidencia %}[{{ e }}](#{{ anclas[e] }}){{ " · " if not loop.last }}{% endfor %}</sub>
-{% endfor %}
-
-<sub>{{ t(s.como_trabajo) }}</sub>
-
-## {{ t(s.secciones.proyectos.titulo) }}
+{{ lamina("proyectos") }}
 {% for p in s.proyectos %}
 
-### {{ p.codigo }} · {{ t(p.nombre) }}
+{{ lamina(p.codigo|lower, p.enlaces[0].url if p.enlaces else none) }}
 
-**{{ t(p.subtitulo) }}** · `{{ t(p.estado) }}`
-
-{% if p.distinciones is defined %}
-> {% for d in p.distinciones.premios %}**{{ t(d.titulo) }}**{{ " · " if not loop.last }}{% endfor %} — {{ t(p.distinciones.texto) }}
-
-{% endif %}
-{{ t(p.descripcion) }}
-
-{% for c in p.cifras %}**{{ t(c.valor) }}** {{ t(c.texto) }}{{ " · " if not loop.last }}{% endfor %}<br>
-<sub>{{ t(s.ui.demuestra) }} {{ t(p.demuestra) }}</sub>
-
-{% for tec in p.tecnologias %}`{{ t(tec) }}` {% endfor +%}
-
-{% if p.enlaces %}
-{% for l in p.enlaces %}[{{ t(l.texto) }} →]({{ l.url }}){{ " · " if not loop.last }}{% endfor %}
-
-{% else %}
-<sub>{{ t(s.ui.privado) }}</sub>
-
-{% endif %}
+<p align="right"><sub>{% if p.enlaces %}{% for l in p.enlaces %}<a href="{{ l.url }}">{{ p.codigo }} · {{ t(l.texto) }} →</a>{{ " · " if not loop.last }}{% endfor %}{% else %}{{ p.codigo }} · {{ t(s.ui.privado) }}{% endif %}</sub></p>
 {% endfor %}
 
-## {{ t(s.secciones.perfil.titulo) }}
+{{ lamina("herramientas") }}
 
-{{ t(s.perfil.intro) }}
+{{ lamina("formacion") }}
 
-| Área | {{ t(s.ui.herramientas)|capitalize }} |
-|---|---|
-{% for g in s.perfil.herramientas %}
-| `{{ t(g.grupo) }}` | {{ g.lista|map("t")|join(" · ") }} |
-{% endfor %}
-| `{{ t(s.ui.idiomas) }}` | {{ s.perfil.idiomas|map("t")|join(" — ") }} |
-
-| Institución | Programa | Estado |
-|---|---|---|
-{% for f in s.perfil.formacion %}
-| **{{ t(f.institucion) }}** | {{ t(f.programa) }} | {{ t(f.estado) }}{% if f.verificar is defined %} · [{{ t(s.ui.verificar) }}]({{ f.verificar }}){% endif %} |
+{% for f in s.perfil.formacion if f.verificar is defined %}
+<p align="right"><sub><a href="{{ f.verificar }}">{{ t(f.institucion) }} · {{ t(s.ui.verificar) }} →</a></sub></p>
 {% endfor %}
 
-**{{ t(s.ui.habilidades_blandas)|capitalize }}.** {{ t(s.perfil.habilidades_blandas) }}
+{{ lamina("contacto", s.sitio.url ~ "#contacto") }}
 
-## {{ t(s.seccion_contacto.titulo) }}
-
-{{ t(s.seccion_contacto.texto) }}
-
-[{{ s.contacto.correo }}](mailto:{{ s.contacto.correo }}) · [{{ s.contacto.linkedin_txt }}]({{ s.contacto.linkedin_url }}) · [Portafolio]({{ s.sitio.url }}) · [{{ t(s.cv.boton) }}]({{ s.sitio.url }}{{ t(s.cv.archivo) }})
+<p align="center">
+  <a href="mailto:{{ s.contacto.correo }}"><b>{{ s.contacto.correo }}</b></a> ·
+  <a href="{{ s.contacto.linkedin_url }}">{{ s.contacto.linkedin_txt }}</a> ·
+  <a href="{{ s.sitio.url }}{{ t(s.cv.archivo) }}">{{ t(s.cv.boton) }}</a> ·
+  <a href="{{ s.sitio.url }}">Portafolio</a>
+</p>
 
 <br>
 
