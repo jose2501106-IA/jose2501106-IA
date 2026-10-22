@@ -47,11 +47,12 @@ Entré a una empresa de distribución como auxiliar administrativo y a los tres 
 <a href="https://jose2501106-ia.github.io/#perfil">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/oratoria-oscuro.webp">
-  <img src="assets/laminas/oratoria-claro.webp" width="100%" alt="Liderazgo, oratoria y comunidad. Universidad Anáhuac México · World Youth Alliance: Emerging Leaders Conference 2026: “Educación en dignidad humana e identidad personal” (Reconocimiento por participación · 23 y 24 de septiembre de 2026); Senado de la República: Certamen Nacional de Oratoria “Ricardo Flores Magón” (Febrero 2026); Congreso del Estado de Oaxaca: Concurso Nacional de Oratoria “Benito Juárez García” (Marzo 2026); Universidad Anáhuac México · Human &amp; Nonhuman Communication Lab: Primer Hackathon de Vibe Coding de la Anáhuac: “El Lenguaje es el nuevo código: Prompting Good Hackathon de AI for Good” (Reconocimiento como asistente · 17 de abril de 2026); Programa de Embajadores de Stellar: Embajador en Latinoamérica · coordinado por BAF (Desde octubre de 2026).">
+  <img src="assets/laminas/oratoria-claro.webp" width="100%" alt="Liderazgo, oratoria y comunidad. Universidad Anáhuac México · World Youth Alliance: Emerging Leaders Conference 2026: “Educación en dignidad humana e identidad personal” (Reconocimiento por participación · 23 y 24 de septiembre de 2026); Senado de la República: II Certamen de Oratoria “Ricardo Flores Magón 2026” (Reconocimiento por destacada participación · 24 de febrero de 2026); Congreso del Estado de Oaxaca: Concurso Nacional de Oratoria “Benito Juárez García” (Marzo 2026); Universidad Anáhuac México · Human &amp; Nonhuman Communication Lab: Primer Hackathon de Vibe Coding de la Anáhuac: “El Lenguaje es el nuevo código: Prompting Good Hackathon de AI for Good” (Reconocimiento como asistente · 17 de abril de 2026); Programa de Embajadores de Stellar: Embajador en Latinoamérica · coordinado por BAF (Desde octubre de 2026).">
 </picture>
 </a>
 
 <p align="right"><sub><a href="https://jose2501106-ia.github.io/reconocimientos/2026-09-23_emerging-leaders-conference.pdf">Emerging Leaders Conference 2026 (Anáhuac · WYA) · Ver reconocimiento (PDF) →</a></sub></p>
+<p align="right"><sub><a href="https://jose2501106-ia.github.io/reconocimientos/2026-02-24_certamen-oratoria-ricardo-flores-magon.pdf">Certamen de Oratoria “Ricardo Flores Magón” (Senado) · Ver reconocimiento (PDF) →</a></sub></p>
 <p align="right"><sub><a href="https://jose2501106-ia.github.io/reconocimientos/2026-04-17_hackathon-vibe-coding-anahuac.pdf">Hackathon de Vibe Coding (Anáhuac) · Ver reconocimiento (PDF) →</a></sub></p>
 
 <a href="https://jose2501106-ia.github.io/#contacto">
