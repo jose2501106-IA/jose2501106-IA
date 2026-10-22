@@ -37,7 +37,8 @@ TEMAS = ("claro", "oscuro")
 ESCALA = 1.5            # 1200 px de diseño → 1800 px de imagen: nítida en pantallas retina
 CALIDAD_WEBP = 90
 
-# Logos del portafolio (assets/img/logos): archivo y tamaño base en px, igual que en scripts/generar.py del portafolio
+# Logos del portafolio: archivo y tamaño base en px, igual que en scripts/generar.py del portafolio.
+# En las láminas van a color de marca (assets/img/logos/color): una imagen no tiene cursor que los encienda.
 LOGOS = {
     "medalla-2": ("medalla-2.svg", 37, 52), "medalla-3": ("medalla-3.svg", 37, 52),
     "hybridge": ("hybridge.svg", 110, 19), "uveg": ("uveg.svg", 78, 21), "anahuac": ("anahuac.svg", 32, 32),
@@ -103,7 +104,7 @@ def generar_readme(s):
 
 
 async def generar_laminas(s, portafolio, nombres):
-    logos = {clave: {"src": (portafolio / "assets/img/logos" / archivo).as_uri(),
+    logos = {clave: {"src": (portafolio / "assets/img/logos/color" / archivo).as_uri(),
                      "ancho": round(ancho * TAMANO_LOGO), "alto": round(alto * TAMANO_LOGO)}
              for clave, (archivo, ancho, alto) in LOGOS.items()}
     env = Environment(loader=FileSystemLoader(RAIZ / "plantillas"), autoescape=True, undefined=StrictUndefined)
