@@ -43,7 +43,8 @@ LOGOS = {
     "medalla-2": ("medalla-2.svg", 37, 52), "medalla-3": ("medalla-3.svg", 37, 52),
     "hybridge": ("hybridge.svg", 110, 19), "uveg": ("uveg.svg", 78, 21), "anahuac": ("anahuac.svg", 32, 32),
     "aspire": ("aspire.svg", 80, 28), "one": ("one.svg", 62, 32), "oracle": ("oracle.svg", 104, 13), "lssi": ("lssi.svg", 78, 32),
-    "stellar": ("stellar.svg", 96, 24), "baf": ("baf.webp", 56, 28), "oratoria": ("oratoria.svg", 32, 32),
+    "stellar": ("stellar.svg", 96, 24), "baf": ("baf.webp", 56, 28),
+    "senado": ("senado.webp", 46, 46), "congreso-oaxaca": ("congreso-oaxaca.webp", 88, 44),
 }
 TAMANO_LOGO = 1.7       # en las tarjetas de formación los logos van más grandes que en el portafolio
 
