@@ -18,6 +18,16 @@
 
 Entré a una empresa de distribución como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como desarrollador independiente, la apoyo con automatizaciones que se usan todos los días y desarrollo sus primeras soluciones de IA, mientras estudio dos ingenierías: Inteligencia Artificial e Industrial.
 
+## 🏆 Logros
+
+<a href="https://luma.com/j55anly0"><img src="https://img.shields.io/badge/1.er_lugar-Laboratorio_de_Futuros_%C2%B7_Chilangat%C3%B3n_2026-D1006A?style=for-the-badge" alt="1.er lugar · Laboratorio de Futuros · Chilangatón 2026"></a>
+
+**1.er lugar del Laboratorio de Futuros del [Chilangatón 2026](https://luma.com/j55anly0)** con el equipo *La Chilangonería del futuro* · 25 de octubre de 2026, Ciudad de México.
+
+- **Trama · la red que cuida tu tiempo:** app, tablero y simulador que manejan el transporte público de la metrópoli como un solo sistema, para devolver tiempo a quien vive lejos y cuida.
+- **En un día:** de 34 fuerzas de cambio a 3 escenarios al 2040 y un prototipo web. Usamos varios chats de IA (Claude) en paralelo; cada cifra lleva fuente y revisión humana.
+- **Mi rol:** análisis de datos e investigación.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/roles-oscuro.webp">
   <img src="assets/laminas/roles-claro.webp" width="100%" alt="Lo que hago, con evidencia. IA y agentes: Agentes con herramientas e integración de modelos de lenguaje (Claude API), del prototipo a la herramienta funcional. Evidencia: P-01, P-02. Automatización de procesos: Automatizo procesos operativos con Python y Apps Script, de la captura de datos a la auditoría diaria. Evidencia: P-03. Mejora continua / Lean: Auditoría diaria de la operación del almacén, mejorada versión tras versión hasta la v7; formación en Lean Management (Lean Six Sigma Institute). Evidencia: P-03. Análisis de datos: Limpieza y análisis con Pandas, y tableros para decidir con números. Evidencia: P-01, P-03.">
