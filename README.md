@@ -19,6 +19,13 @@
 Entré a una empresa de distribución como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como desarrollador independiente, la apoyo con automatizaciones que se usan todos los días y desarrollo sus primeras soluciones de IA, mientras estudio dos ingenierías: Inteligencia Artificial e Industrial.
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/logro-oscuro.webp">
+  <img src="assets/laminas/logro-claro.webp" width="100%" alt="1.er lugar en equipo · Laboratorio de Futuros: Chilangatón 2026. En equipo con La Chilangonería del futuro. La propuesta del equipo: movilidad para la CDMX y su zona metropolitana al 2040, con lente de cuidados y periferias. Metodología de estudios de futuros · la aprendí de mis compañeras especialistas: 34 fuerzas de cambio (con fuente · STEEP), Matriz (impacto × incertidumbre), 3 escenarios al 2040 (Colapso · Inercial · Transformación), 11 metas (medibles). Mi rol: Análisis de datos e investigación; Lo que más me llevo: Trabajo en equipo, confianza y comunicación; Fecha: 25 de octubre de 2026. Investigación con apoyo de IA (Claude); cada cifra con fuente y revisión humana.">
+</picture>
+
+<p align="right"><sub><a href="https://luma.com/j55anly0">Laboratorio de Futuros · Chilangatón 2026 · Ver convocatoria →</a></sub></p>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/laminas/roles-oscuro.webp">
   <img src="assets/laminas/roles-claro.webp" width="100%" alt="Lo que hago, con evidencia. IA y agentes: Agentes con herramientas e integración de modelos de lenguaje (Claude API), del prototipo a la herramienta funcional. Evidencia: P-01, P-02. Automatización de procesos: Automatizo procesos operativos con Python y Apps Script, de la captura de datos a la auditoría diaria. Evidencia: P-03. Mejora continua / Lean: Auditoría diaria de la operación del almacén, mejorada versión tras versión hasta la v7; formación en Lean Management (Lean Six Sigma Institute). Evidencia: P-03. Análisis de datos: Limpieza y análisis con Pandas, y tableros para decidir con números. Evidencia: P-01, P-03.">
 </picture>

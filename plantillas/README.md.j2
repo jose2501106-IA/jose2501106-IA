@@ -13,6 +13,12 @@
 
 {{ t(s.portada.historia) }}
 
+{% if logro %}
+{{ lamina("logro") }}
+
+<p align="right"><sub><a href="{{ logro.lamina.enlace.url }}">{{ t(logro.lamina.enlace.texto) }} →</a></sub></p>
+{% endif %}
+
 {{ lamina("roles") }}
 
 {{ lamina("proyectos", s.sitio.url ~ "#proyectos") }}
