@@ -40,7 +40,7 @@ CALIDAD_WEBP = 90
 # Logos del portafolio: archivo y tamaño base en px, igual que en scripts/generar.py del portafolio.
 # En las láminas van a color de marca (assets/img/logos/color): una imagen no tiene cursor que los encienda.
 LOGOS = {
-    "medalla-2": ("medalla-2.svg", 37, 52), "medalla-3": ("medalla-3.svg", 37, 52),
+    "medalla-1": ("medalla-1.svg", 37, 52), "medalla-2": ("medalla-2.svg", 37, 52), "medalla-3": ("medalla-3.svg", 37, 52),
     "hybridge": ("hybridge.svg", 110, 19), "uveg": ("uveg.svg", 78, 21), "anahuac": ("anahuac.svg", 32, 32),
     "aspire": ("aspire.svg", 80, 28), "one": ("one.svg", 62, 32), "oracle": ("oracle.svg", 104, 13), "lssi": ("lssi.svg", 78, 32),
     "stellar": ("stellar.svg", 96, 24), "baf": ("baf.webp", 56, 28),
@@ -106,7 +106,20 @@ def textos_alternativos(s):
         "contacto": f'{t(s["seccion_contacto"]["titulo"])} Correo: {s["contacto"]["correo"]}; LinkedIn: {s["contacto"]["linkedin_txt"]}; '
                     f'CV en PDF; {t(s["contacto"]["ubicacion"])}.',
     }
+    logro = lamina_logro(s)
+    if logro:
+        l = logro["lamina"]
+        alt["logro"] = (f'{t(logro["puesto"])}: {t(l["titulo"])}. {t(l["equipo"])}. {t(l["propuesta"])} '
+                        f'{oracion(t(l["metodo"]))}: '
+                        + unir((f'{t(p["valor"])} ({t(p["texto"])})' for p in l["pasos"]), ", ") + ". "
+                        + unir(f'{oracion(t(f["et"]))}: {t(f["valor"])}' for f in l["ficha"]) + ". "
+                        + t(l["nota"]).lstrip("/ "))
     return alt
+
+
+def lamina_logro(s):
+    """La entrada de experiencia que trae «lamina» (un premio que va como lámina propia), o None si no hay."""
+    return next((x for x in s["experiencia"] if "lamina" in x), None)
 
 
 def generar_readme(s):
@@ -120,7 +133,7 @@ def generar_readme(s):
     env = Environment(loader=FileSystemLoader(RAIZ / "plantillas"), autoescape=False,
                       undefined=StrictUndefined, trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True)
     env.filters["t"] = t
-    texto = env.get_template("README.md.j2").render(s=s, t=t, lamina=lamina, serpiente=SERPIENTE,
+    texto = env.get_template("README.md.j2").render(s=s, t=t, lamina=lamina, serpiente=SERPIENTE, logro=lamina_logro(s),
                                                           verificaciones=verificaciones(s), documentos=documentos(s))
     texto = re.sub(r"\n{3,}", "\n\n", texto)  # sin renglones vacíos de más
     (RAIZ / "README.md").write_text(texto, encoding="utf-8")
@@ -142,7 +155,7 @@ async def generar_laminas(s, portafolio, nombres):
     async with async_playwright() as p:
         navegador = await p.chromium.launch()
         for tema in TEMAS:
-            html_tema = plantilla.render(s=s, t=t, tema=tema, base=portafolio.as_uri() + "/", logos=logos,
+            html_tema = plantilla.render(s=s, t=t, tema=tema, base=portafolio.as_uri() + "/", logos=logos, logro=lamina_logro(s),
                                          dominio=s["sitio"]["url"].removeprefix("https://").rstrip("/"))
             archivo = LAMINAS.parent / f".laminas-{tema}.html"
             archivo.write_text(html_tema, encoding="utf-8")

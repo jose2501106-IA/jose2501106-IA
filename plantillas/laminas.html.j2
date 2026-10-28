@@ -145,6 +145,31 @@
   .fila { display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: center; padding: 17px 20px; border-bottom: 1.5px solid var(--linea); }
   .fila:last-child { border-bottom: 0; }
   .fila b { font: 600 19px var(--sans); color: var(--tinta); }
+
+  /* ───────── Logro: premio en equipo y su metodología (la entrada de experiencia que trae «lamina») ───────── */
+  .logro__cuerpo { margin-top: 30px; display: flex; align-items: center; gap: 40px; }
+  .logro__medalla { position: relative; flex: none; padding: 18px; }
+  .logro__medalla .esq { position: absolute; width: 22px; height: 22px; border: 0 solid var(--acento); }
+  .logro__marco { width: 172px; height: 204px; display: flex; align-items: center; justify-content: center; gap: 12px; background: #FFFFFF; border: 2px solid var(--acento); }
+  .logro__marco img { width: 106px; height: 148px; }
+  .logro__texto { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .logro__kicker { font: 17px var(--mono); letter-spacing: 3px; color: var(--acento); }
+  .logro__texto h2 { font: 700 58px/1 var(--mono); letter-spacing: -2px; color: var(--tinta); }
+  .logro__equipo { font-size: 27px; line-height: 1.25; font-weight: 600; color: var(--vivo); }
+  .logro__propuesta { font-size: 20px; line-height: 1.5; color: var(--texto-2); text-wrap: pretty; }
+  .metodo { margin-top: 34px; }
+  .metodo .etiqueta { color: var(--acento); }
+  .pasos { margin-top: 14px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; list-style: none; }
+  .paso { position: relative; display: flex; flex-direction: column; gap: 3px; padding: 14px 16px; border: 2px solid var(--acento); background: var(--fondo); }
+  .paso .n { font: 13px var(--mono); letter-spacing: 1px; color: var(--gris); }
+  .paso b { font-size: 21px; line-height: 1.25; font-weight: 600; color: var(--tinta); }
+  .paso .txt { font-size: 17px; line-height: 1.35; color: var(--texto-2); }
+  .paso:not(:last-child)::after { content: ""; position: absolute; top: 50%; left: 100%; width: 28px; border-top: 2px dashed var(--acento); }
+  .paso:not(:last-child)::before { content: ""; position: absolute; top: calc(50% - 6px); left: calc(100% + 18px); border: 6px solid transparent; border-left: 9px solid var(--acento); border-right: 0; }
+  .ficha-l { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid var(--acento); background: var(--fondo); }
+  .ficha-l > div { padding: 14px 18px; display: flex; flex-direction: column; gap: 5px; border-right: 1.5px solid var(--linea); }
+  .ficha-l > div:last-child { border-right: 0; }
+  .ficha-l b { font-size: 20px; line-height: 1.3; font-weight: 600; color: var(--tinta); }
 </style>
 </head>
 <body>
@@ -172,6 +197,34 @@
   </div>
   <div class="barra"><span>{{ dominio }}</span><span>ES · EN</span></div>
 </section>
+
+{# ═════════ Logro: premio en equipo (sale de la entrada de experiencia que trae «lamina») ═════════ #}
+{% if logro %}
+{% set l = logro.lamina %}
+<section class="lamina" data-nombre="logro">
+  <div class="meta"><span>{{ t(s.ui.hoja) }} {{ t(l.hoja) }}</span><span>{{ t(logro.etiqueta) }} · {{ t(logro.lugar) }}</span></div>
+  <div class="logro__cuerpo">
+    <div class="logro__medalla">
+      <span class="esq ti"></span><span class="esq td"></span><span class="esq bi"></span><span class="esq bd"></span>
+      <div class="logro__marco">{% for m in logro.logos %}<img src="{{ logos[m].src }}" alt="">{% endfor %}</div>
+    </div>
+    <div class="logro__texto">
+      <div class="logro__kicker">{{ t(l.kicker) }}</div>
+      <h2>{{ t(l.titulo) }}</h2>
+      <div class="logro__equipo">{{ t(l.equipo) }}</div>
+      <p class="logro__propuesta">{{ t(l.propuesta) }}</p>
+    </div>
+  </div>
+  <div class="metodo">
+    <span class="etiqueta">{{ t(l.metodo) }}</span>
+    <ol class="pasos">
+      {% for p in l.pasos %}<li class="paso"><span class="n">{{ "%02d"|format(loop.index) }}</span><b>{{ t(p.valor) }}</b><span class="txt">{{ t(p.texto) }}</span></li>{% endfor %}
+    </ol>
+  </div>
+  <div class="ficha-l">{% for f in l.ficha %}<div><span class="etiqueta">{{ t(f.et) }}</span><b>{{ t(f.valor) }}</b></div>{% endfor %}</div>
+  <p class="como">{{ t(l.nota) }}</p>
+</section>
+{% endif %}
 
 {# ═════════ Roles ═════════ #}
 <section class="lamina" data-nombre="roles">
