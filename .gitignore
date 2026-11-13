@@ -1,5 +1,5 @@
 # Temporales del generador (scripts/generar_readme.py los borra al terminar)
-.laminas-*.html
+.imagenes.html
 __pycache__/
 .venv/
 
