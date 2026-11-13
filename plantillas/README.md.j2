@@ -1,6 +1,17 @@
 <!-- Generado por scripts/generar_readme.py desde data/perfil.yml del portafolio. No lo edites a mano: cambia perfil.yml y vuelve a generar. -->
+{# Todo va en texto y en tablas de dos columnas: caben en un celular sin recorrerlas de lado.
+   Dentro de una tabla no puede quedar ningún renglón vacío (GitHub cortaría el bloque HTML). #}
+{% macro chips(lista) %}{% for h in lista %}<code>{{ t(h)|e }}</code>{{ " " if not loop.last }}{% endfor %}{% endmacro %}
+{% macro fuente(c) %}{{ t(s.ui.fuente) }} {% if c.fuente.url is defined %}<a href="{{ c.fuente.url }}">{{ t(c.fuente.corta)|e }}</a>{% else %}{{ t(c.fuente.corta)|e }}{% endif %}{% endmacro %}
+{% macro fila_logos(fichas) %}<p>{% for f in fichas %}<img src="assets/logos/{{ f.clave }}.webp" height="52" alt="{{ f.alt|e }}">{{ "&nbsp; " if not loop.last }}{% endfor %}</p>{% endmacro %}
 
-{{ lamina("encabezado", s.sitio.url) }}
+<a href="{{ s.sitio.url }}"><img src="assets/encabezado.webp" width="100%" alt="{{ alt_encabezado|e }}"></a>
+
+<p align="center">
+  <sub>{{ t(s.portada.linea_superior)|e }}</sub><br>
+  <b>{{ t(s.portada.subtitulo)|e }}</b><br>
+  {{ t(s.portada.bajada)|e }}
+</p>
 
 <p align="center">
   <a href="{{ s.sitio.url }}"><b>Portafolio</b></a> ·
@@ -13,47 +24,116 @@
 
 {{ t(s.portada.historia) }}
 
-{% if logro %}
-{{ lamina("logro") }}
+<table>
+{% for c in s.portada.cifras %}
+<tr><th scope="row" align="right" valign="top">{{ t(c.valor)|e }}</th><td valign="top" width="100%">{{ t(c.texto)|e }}<br><sub><code>{{ c.codigo }}</code> · {{ fuente(c) }}</sub></td></tr>
+{% endfor %}
+</table>
 
-<p align="right"><sub><a href="{{ logro.lamina.enlace.url }}">{{ t(logro.lamina.enlace.texto) }} →</a></sub></p>
+{% if logro %}
+{% set l = logro.lamina %}
+## {{ t(logro.puesto) }}: {{ t(l.titulo) }}
+
+<sub>{{ t(logro.etiqueta) }} · {{ t(logro.lugar) }}</sub>
+
+**{{ t(l.equipo) }}.** {{ t(l.propuesta) }}
+
+<table>
+<tr><th scope="row" align="left" valign="top" width="34%">{{ oracion(t(l.metodo))|e }}</th><td valign="top">{% for p in l.pasos %}<b>{{ t(p.valor)|e }}</b> · {{ t(p.texto)|e }}{{ "<br>" if not loop.last }}{% endfor %}</td></tr>
+{% for f in l.ficha %}
+<tr><th scope="row" align="left" valign="top">{{ oracion(t(f.et))|e }}</th><td valign="top">{{ t(f.valor)|e }}</td></tr>
+{% endfor %}
+</table>
+
+<sub>{{ t(l.nota).lstrip("/ ") }} · <a href="{{ l.enlace.url }}">{{ t(l.enlace.texto) }} →</a></sub>
 {% endif %}
 
-{{ lamina("roles") }}
+## {{ t(s.secciones.roles.titulo) }}
 
-{{ lamina("proyectos", s.sitio.url ~ "#proyectos") }}
-
-<p align="right"><sub>{% for p in s.proyectos %}{% if p.enlaces %}<a href="{{ p.enlaces[0].url }}">{{ p.codigo }} {{ t(p.nombre) }} →</a>{% else %}{{ p.codigo }} {{ t(p.nombre) }} ({{ t(s.ui.privado)|lower }}){% endif %}{{ " · " if not loop.last }}{% endfor %}</sub></p>
-
-{{ lamina("herramientas") }}
-
-{{ lamina("formacion") }}
-
-{% for texto, url in verificaciones %}
-<p align="right"><sub><a href="{{ url }}">{{ texto }} · {{ t(s.ui.verificar) }} →</a></sub></p>
+<table>
+{% for r in s.roles %}
+<tr><th scope="row" align="left" valign="top" width="30%"><code>{{ r.codigo }}</code><br>{{ t(r.titulo)|e }}</th><td valign="top">{{ t(r.texto)|e }}<br><sub>{{ t(s.ui.evidencia) }}</sub> {% for e in r.evidencia %}<code>{{ e }}</code> {% endfor %}{% for x in r.evidencia_extra|default([]) %}· <a href="{{ s.sitio.url }}#{{ x.ancla }}">{{ t(x.texto)|e }}</a>{% endfor %}</td></tr>
 {% endfor %}
+</table>
 
-{{ lamina("oratoria", s.sitio.url ~ "#perfil") }}
+<code>{{ t(s.como_trabajo)|e }}</code>
 
-{% for texto, url in documentos %}
-<p align="right"><sub><a href="{{ url }}">{{ texto }} →</a></sub></p>
+## {{ t(s.secciones.proyectos.titulo) }}
+
+<table>
+{% for p in s.proyectos %}
+<tr>
+<td valign="top" width="46%"><sub><code>{{ p.codigo }}</code> · {% for c in p.categorias %}{{ t(s.categorias[c].fig) }}{{ " · " if not loop.last }}{% endfor %}</sub><br><b>{{ t(p.nombre)|e }}</b><br>{{ t(p.subtitulo)|e }}<br><sub>{% if p.enlaces %}{% for en in p.enlaces %}<a href="{{ en.url }}">{{ t(en.texto)|e }} →</a>{{ " · " if not loop.last }}{% endfor %}{% else %}{{ t(s.ui.privado) }}{% endif %}</sub></td>
+<td valign="top"><b>{{ t(p.estado) }}</b><br>{% if p.distinciones is defined %}{% for d in p.distinciones.premios %}{{ t(d.titulo)|e }}<br>{% endfor %}{% else %}{% for c in p.cifras %}<b>{{ t(c.valor)|e }}</b> {{ t(c.texto)|e }}<br>{% endfor %}{% endif %}{{ chips(p.tecnologias) }}</td>
+</tr>
 {% endfor %}
+</table>
 
-{{ lamina("contacto", s.sitio.url ~ "#contacto") }}
+<p align="right"><sub><a href="{{ s.sitio.url }}#proyectos">Ver en el portafolio →</a></sub></p>
 
-<p align="center">
-  <a href="mailto:{{ s.contacto.correo }}"><b>{{ s.contacto.correo }}</b></a> ·
-  <a href="{{ s.contacto.linkedin_url }}">{{ s.contacto.linkedin_txt }}</a> ·
-  <a href="{{ s.sitio.url }}{{ t(s.cv.archivo) }}">{{ t(s.cv.boton) }}</a> ·
-  <a href="{{ s.sitio.url }}">Portafolio</a>
-</p>
+{# Las tres secciones que siguen van plegadas: el detalle completo se abre con un clic. #}
+## {{ oracion(t(s.ui.herramientas)) }}
 
+<details>
+<summary>{% for g in s.perfil.herramientas %}{{ oracion(t(g.grupo))|e }} · {% endfor %}{{ oracion(t(s.ui.idiomas)) }} · {{ oracion(t(s.ui.habilidades_blandas)) }}</summary>
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="{{ serpiente }}/github-snake-dark.svg">
-  <img src="{{ serpiente }}/github-snake.svg" width="100%" alt="Mis contribuciones en GitHub del último año, recorridas por una serpiente">
-</picture>
+<table>
+{% for g in s.perfil.herramientas %}
+<tr><th scope="row" align="left" valign="top" width="26%">{{ oracion(t(g.grupo))|e }}</th><td>{{ chips(g.lista) }}</td></tr>
+{% endfor %}
+<tr><th scope="row" align="left" valign="top">{{ oracion(t(s.ui.idiomas)) }}</th><td>{{ s.perfil.idiomas|map("t")|join("<br>") }}</td></tr>
+<tr><th scope="row" align="left" valign="top">{{ oracion(t(s.ui.habilidades_blandas)) }}</th><td>{{ t(s.perfil.habilidades_blandas)|e }}</td></tr>
+</table>
+
+</details>
+
+## {{ oracion(t(s.ui.formacion_programas)) }}
+
+{{ fila_logos(fichas_formacion) }}
+
+<details>
+<summary>Ver los {{ s.perfil.formacion|length }} programas</summary>
+<br>
+
+<table>
+{% for f in s.perfil.formacion %}
+<tr><th scope="row" align="left" valign="top" width="36%">{{ t(f.institucion)|e }}</th><td valign="top">{{ t(f.programa)|e }}<br>{% if f.fases is defined %}{% for fa in f.fases %}<b>{{ t(fa.nombre)|e }}</b> · {{ t(fa.estado)|e }}{% if fa.verificar is defined %} · <a href="{{ fa.verificar }}">{{ t(s.ui.verificar) }} →</a>{% endif %}{{ "<br>" if not loop.last }}{% endfor %}{% else %}{{ t(f.estado)|e }}{% if f.verificar is defined %} · <a href="{{ f.verificar }}">{{ t(s.ui.verificar) }} →</a>{% endif %}{% endif %}</td></tr>
+{% endfor %}
+</table>
+
+</details>
+
+## {{ oracion(t(s.ui.oratoria_comunidad)) }}
+
+{{ fila_logos(fichas_oratoria) }}
+
+<details>
+<summary>Ver los {{ s.perfil.oratoria_comunidad|length }} registros</summary>
+<br>
+
+<table>
+{% for f in s.perfil.oratoria_comunidad %}
+<tr><th scope="row" align="left" valign="top" width="36%">{{ t(f.institucion)|e }}</th><td valign="top">{{ t(f.programa)|e }}<br>{{ t(f.estado)|e }}{% if f.documento is defined %}<br><a href="{{ s.sitio.url }}{{ f.documento }}">{{ t(s.ui.ver_reconocimiento) }} →</a>{% endif %}</td></tr>
+{% endfor %}
+</table>
+
+<p align="right"><sub><a href="{{ s.sitio.url }}#perfil">Ver en el portafolio →</a></sub></p>
+
+</details>
+
+## {{ t(s.seccion_contacto.titulo) }}
+
+{{ t(s.seccion_contacto.texto) }}
+
+{# En lista y no en tabla: GitHub no deja partir el correo dentro de una celda y en celular la tabla se saldría de la pantalla. #}
+<p>
+<b>{{ t(s.seccion_contacto.filas.correo) }}</b> · <a href="mailto:{{ s.contacto.correo }}">{{ s.contacto.correo }}</a><br>
+<b>{{ t(s.seccion_contacto.filas.linkedin) }}</b> · <a href="{{ s.contacto.linkedin_url }}">{{ s.contacto.linkedin_txt }}</a><br>
+<b>{{ t(s.seccion_contacto.filas.cv) }}</b> · <a href="{{ s.sitio.url }}{{ t(s.cv.archivo) }}">{{ t(s.cv.boton) }}</a><br>
+<b>{{ t(s.ui.marca_sub) }}</b> · <a href="{{ s.sitio.url }}#contacto">{{ dominio }}</a><br>
+<b>{{ t(s.seccion_contacto.filas.ubicacion) }}</b> · {{ t(s.contacto.ubicacion) }}
+</p>
 
 <p align="center"><i>{{ t(s.pie.frase) }}</i></p>
 
