@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Schibsted Grotesk"; font-weight: 400 900; src: url("{{ base }}assets/fuentes/schibsted-grotesk.woff2") format("woff2"); }
+  @font-face { font-family: "Fragment Mono"; font-weight: 400; src: url("{{ base }}assets/fuentes/fragment-mono-400.woff2") format("woff2"); }
+
+  /* Estilo A · Laboratorio del portafolio, en oscuro: lámina en petróleo, paneles en petróleo oscuro.
+     Contrastes medidos: blanco sobre #0F5E66, 7.5:1; blanco sobre #0B4A51, 9.9:1; #D5ECEE sobre ambos, 6.1:1 y 8.1:1. */
+  :root { --pet: #0F5E66; --osc: #0B4A51; --tinta: #12181B; --suave: #E2EEEF; --t2: #D5ECEE; --ln: rgba(255, 255, 255, .22);
+          --sans: "Schibsted Grotesk", sans-serif; --mono: "Fragment Mono", monospace; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { width: 1300px; padding: 20px; background: transparent; display: flex; flex-direction: column; align-items: flex-start; gap: 40px; }
+
+  /* Cada lámina sale en dos anchos: .d (computadora, 846 px) y .m (celular, 326 px). Ningún texto baja de 12 px. */
+  .lam { background: var(--pet); color: #FFFFFF; font-family: var(--sans); border-radius: 6px; }
+  .lam.d { width: 846px; padding: 24px 28px 26px; }
+  .lam.m { width: 326px; padding: 22px 20px 24px; }
+  .et { font: 400 12px/16px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--t2); }
+  .chip { font: normal 400 12px/18px var(--mono); padding: 0 7px; border: 1px solid rgba(255, 255, 255, .5); border-radius: 2px; white-space: nowrap; }
+
+  /* ───────── Portada: quién es, qué construye y con qué pruebas ───────── */
+  .p-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .marca { display: flex; align-items: center; gap: 12px; }
+  .marca svg { display: block; }
+  .marca span { font: 400 17px/1 var(--mono); letter-spacing: .06em; }
+  .p-cuerpo { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 26px; margin-top: 24px; align-items: start; }
+  .kicker { font: 400 13px/16px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--t2); }
+  .portada h1 { margin-top: 12px; font: 700 58px/.98 var(--sans); letter-spacing: -.025em; }
+  .sub { margin-top: 16px; font: 600 23px/1.25 var(--sans); letter-spacing: -.005em; text-wrap: balance; }
+  .bajada { margin-top: 10px; font: 400 14.5px/1.4 var(--sans); color: var(--t2); text-wrap: balance; }
+  .premios { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .premio { display: flex; align-items: center; gap: 12px; }
+  .premio .med { display: flex; gap: 3px; flex: none; }
+  .premio .med img { display: block; width: 20px; height: 28px; }
+  .premio b { display: block; font: 600 13.5px/1.3 var(--sans); }
+  .premio span { display: block; font: 400 12.5px/1.35 var(--sans); color: var(--t2); }
+  .cifras { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .cifra { display: flex; flex-direction: column; padding: 12px 14px 13px; background: var(--osc); border-radius: 2px; }
+  .cifra .cod { font: 400 12px/16px var(--mono); letter-spacing: .08em; color: var(--t2); }
+  .cifra .val { margin-top: 2px; font: 700 40px/1.05 var(--sans); letter-spacing: -.02em; }
+  .cifra .txt { margin-top: 5px; font: 400 13.5px/1.32 var(--sans); }
+  .cifra .fte { margin-top: auto; padding-top: 9px; font: 400 12px/1.3 var(--sans); color: var(--t2); }
+  .registro { margin-top: 20px; padding-top: 13px; border-top: 1px solid var(--ln); display: grid; grid-template-columns: 1.25fr 1.25fr 1.1fr .8fr; gap: 20px; }
+  .registro dd { margin-top: 4px; font: 400 13.5px/1.35 var(--sans); text-wrap: balance; }
+
+  .m .p-cuerpo { display: block; margin-top: 22px; }
+  .m .kicker { font-size: 12px; letter-spacing: .03em; }
+  .m.portada h1 { margin-top: 12px; font-size: 46px; }
+  .m .sub { margin-top: 14px; font-size: 20px; }
+  .m .bajada { font-size: 13.5px; }
+  .m .premios { margin-top: 20px; gap: 12px; }
+  .m .cifras { margin-top: 22px; grid-template-columns: 1fr; }
+  .m .cifra { display: grid; grid-template-columns: 82px minmax(0, 1fr); grid-template-areas: "val cod" "val txt" "val fte"; column-gap: 12px; padding: 12px 14px; }
+  .m .cifra .val { grid-area: val; align-self: center; margin-top: 0; font-size: 34px; }
+  .m .cifra .cod { grid-area: cod; }
+  .m .cifra .txt { grid-area: txt; margin-top: 2px; }
+  .m .cifra .fte { grid-area: fte; margin-top: 0; padding-top: 5px; }
+  .m .registro { margin-top: 22px; grid-template-columns: 1fr; gap: 12px; }
+  .m .registro dd { font-size: 14px; }
+
+  /* ───────── Logro: premio en equipo ───────── */
+  .l-top { display: flex; justify-content: space-between; gap: 16px; }
+  .l-cuerpo { display: grid; grid-template-columns: 304px minmax(0, 1fr); gap: 30px; margin-top: 14px; align-items: start; }
+  .l-tit { display: flex; align-items: center; gap: 14px; }
+  .l-tit img { display: block; flex: none; width: 30px; height: 42px; }
+  .l-tit h2 { font: 700 28px/1.1 var(--sans); letter-spacing: -.015em; }
+  .l-equipo { margin-top: 12px; font: 600 14.5px/1.35 var(--sans); }
+  .l-prop { margin-top: 6px; font: 400 13.5px/1.45 var(--sans); color: var(--t2); }
+  .pasos { list-style: none; margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .pasos li { display: grid; grid-template-columns: auto minmax(0, 1fr); align-content: start; column-gap: 10px; padding: 9px 12px 10px; background: var(--osc); border-radius: 2px; }
+  .pasos .n { grid-row: span 2; font: 400 12px/19px var(--mono); color: var(--t2); }
+  .pasos b { font: 600 14px/1.35 var(--sans); }
+  .pasos .t { font: 400 12.5px/1.35 var(--sans); color: var(--t2); }
+  .l-ficha { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--ln); display: grid; grid-template-columns: 304px minmax(0, 1fr) auto; gap: 30px; }
+  .l-ficha dd { margin-top: 3px; font: 600 13.5px/1.35 var(--sans); }
+  .l-nota { margin-top: 12px; font: 400 12px/1.45 var(--mono); color: var(--t2); }
+
+  .m .l-top { flex-direction: column; gap: 4px; }
+  .m .l-cuerpo { display: block; }
+  .m .l-der { margin-top: 20px; }
+  .m .pasos { grid-template-columns: 1fr; }
+  .m .l-ficha { grid-template-columns: 1fr; gap: 10px; }
+  .m .l-ficha dd { font-size: 14px; }
+
+  /* Premio sin «lamina» propia: se arma con lo que ya dice su entrada de experiencia y su proyecto premiado */
+  .l-meds { display: flex; gap: 4px; flex: none; }
+  .l-meds img { display: block; width: 30px; height: 42px; }
+  .pts { list-style: none; margin-top: 10px; display: grid; gap: 8px; }
+  .pts li { padding: 10px 14px 11px; background: var(--osc); border-radius: 2px; font: 400 13.5px/1.45 var(--sans); }
+  .l-ficha--proy { grid-template-columns: 304px minmax(0, 1fr) minmax(0, 1fr); }
+  .m .l-ficha--proy { grid-template-columns: 1fr; }
+  .m .pts li { font-size: 14px; }
+
+  /* ───────── Roles: lo que hago, con evidencia ───────── */
+  .r-rej { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .rol { padding: 12px 16px 13px; background: var(--osc); border-radius: 2px; }
+  .rol--dest { grid-column: 1 / -1; }
+  .rol__cab { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .evid { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+  .rol h3 { margin-top: 8px; font: 700 18px/1.2 var(--sans); letter-spacing: -.005em; }
+  .rol p { margin-top: 5px; font: 400 13.5px/1.48 var(--sans); }
+  .como { margin-top: 11px; font: 400 12px/1.5 var(--mono); color: var(--t2); }
+  .m .r-rej { grid-template-columns: 1fr; }
+  .m .rol { padding: 13px 16px 15px; }
+  .m .rol__cab { flex-direction: column; align-items: flex-start; gap: 7px; }
+  .m .rol h3 { margin-top: 10px; }
+  .m .rol p { font-size: 14px; }
+
+  /* ───────── Proyectos: cuatro fichas ───────── */
+  .p-rej { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tar { display: flex; flex-direction: column; padding: 12px 16px 14px; background: var(--osc); border-radius: 2px; }
+  .tar__tit { margin-top: 8px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .estado { flex: none; padding: 0 8px; background: #FFFFFF; color: var(--osc); border-radius: 2px; font: 400 12px/20px var(--mono); letter-spacing: .06em; white-space: nowrap; }
+  .tar h3 { font: 700 21px/1.15 var(--sans); letter-spacing: -.01em; }
+  .tar__sub { margin-top: 3px; font: 400 13.5px/1.4 var(--sans); color: var(--t2); }
+  .tar__cifras { margin-top: 12px; display: flex; gap: 16px; }
+  .tar__cifras div { display: flex; align-items: center; gap: 8px; }
+  .tar__cifras b { font: 700 26px/1.05 var(--sans); letter-spacing: -.015em; }
+  .tar__cifras span { max-width: 88px; font: 400 12.5px/1.25 var(--sans); color: var(--t2); }
+  .tar__premios { margin-top: 12px; display: flex; flex-direction: column; gap: 7px; }
+  .tar__premios div { display: flex; align-items: center; gap: 10px; }
+  .tar__premios img { display: block; flex: none; width: 17px; height: 24px; }
+  .tar__premios b { font: 400 12.5px/1.3 var(--mono); letter-spacing: .05em; }
+  .tar__tec { margin-top: auto; padding-top: 12px; display: flex; flex-wrap: wrap; gap: 5px; }
+  .tar__tec .chip { border-color: rgba(255, 255, 255, .34); color: var(--t2); }
+  .tar__priv { margin-top: 10px; font: 400 12px/16px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--t2); }
+  .m .p-rej { grid-template-columns: 1fr; }
+  .m .tar { padding: 13px 16px 16px; }
+  .m .tar__tit { flex-direction: column-reverse; align-items: flex-start; gap: 8px; }
+  .m .tar__cifras { gap: 18px; }
+  .m .tar__cifras div { display: block; }
+  .m .tar__cifras b { display: block; }
+  .m .tar__cifras span { display: block; margin-top: 2px; max-width: 104px; }
+
+  /* ───────── Botones (cada uno es una imagen pequeña con su enlace) ───────── */
+  .botones { display: flex; flex-wrap: wrap; gap: 16px; }
+  .boton { display: flex; align-items: center; height: 40px; padding: 0 18px; border-radius: 2px; background: var(--suave); color: var(--tinta); font: 600 15px/1 var(--sans); white-space: nowrap; }
+  .boton--p { background: var(--pet); color: #FFFFFF; }
+
+  /* ───────── Fichas de logos: cada logo va tal cual, sobre blanco ───────── */
+  .fichas { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px; width: 1200px; }
+  .ficha { display: flex; align-items: center; gap: 14px; height: 52px; padding: 0 16px; background: #FFFFFF; border-radius: 6px; }
+  .ficha img { display: block; }
+</style>
+</head>
+<body>
+
+{% macro nodo(ancho, alto) %}<svg width="{{ ancho }}" height="{{ alto }}" viewBox="0 0 32 12" aria-hidden="true"><circle cx="5" cy="6" r="5" fill="currentColor"/><path d="M10 6H24" stroke="currentColor" stroke-width="1.5"/><circle cx="28" cy="6" r="3.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>{% endmacro %}
+
+{# ═════════ Portada ═════════ #}
+{% macro portada(v) %}
+<section class="lam portada {{ v }}" data-nombre="portada{{ '-celular' if v == 'm' }}">
+  <header class="p-top">
+    <div class="marca">{{ nodo(48, 18) }}<span>{{ s.sitio.marca }}</span></div>
+    <span class="et">{{ t(s.ui.marca_sub) }}{% if v == 'd' %} · {{ dominio }}{% endif %}</span>
+  </header>
+  <div class="p-cuerpo">
+    <div>
+      <div class="kicker">{{ t(s.portada.linea_superior) }}</div>
+      <h1>{{ s.sitio.nombre_h1[0] }}<br>{{ s.sitio.nombre_h1[1] }}</h1>
+      <p class="sub">{{ t(s.portada.subtitulo) }}</p>
+      <p class="bajada">{{ t(s.portada.bajada)|pegar }}</p>
+      <div class="premios">
+        {% for x in premios %}
+        <div class="premio"><span class="med">{% for m in x.logos %}<img src="{{ logos[m].src }}" alt="">{% endfor %}</span><div><b>{{ t(x.puesto)|pegar }}</b><span>{{ t(x.donde)|pegar }}</span></div></div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="cifras">
+      {% for c in s.portada.cifras %}
+      <div class="cifra"><span class="cod">{{ c.codigo }}</span><b class="val">{{ t(c.valor) }}</b><span class="txt">{{ t(c.texto) }}</span><span class="fte">{{ t(s.ui.fuente) }} {{ t(c.fuente.corta) }}</span></div>
+      {% endfor %}
+    </div>
+  </div>
+  <dl class="registro">
+    {% for d in s.portada.datos %}
+    <div><dt class="et">{{ t(d.etiqueta) }}</dt><dd>{{ t(d.valor)|pegar }}</dd></div>
+    {% endfor %}
+  </dl>
+</section>
+{% endmacro %}
+
+{# ═════════ Logro ═════════ #}
+{% macro lamina_logro(v) %}
+{% set l = logro.lamina %}
+<section class="lam logro {{ v }}" data-nombre="logro{{ '-celular' if v == 'm' }}">
+  <div class="l-top"><span class="et">{{ t(l.kicker) }}</span><span class="et">{{ t(logro.etiqueta) }} · {{ t(logro.lugar) }}</span></div>
+  <div class="l-cuerpo">
+    <div>
+      <div class="l-tit">{% for m in logro.logos %}<img src="{{ logos[m].src }}" alt="">{% endfor %}<h2>{{ t(l.titulo) }}</h2></div>
+      <p class="l-equipo">{{ t(l.equipo) }}</p>
+      <p class="l-prop">{{ t(l.propuesta) }}</p>
+    </div>
+    <div class="l-der">
+      <div class="et">{{ t(l.metodo) }}</div>
+      <ol class="pasos">
+        {% for p in l.pasos %}<li><span class="n">{{ "%02d"|format(loop.index) }}</span><b>{{ t(p.valor) }}</b><span class="t">{{ t(p.texto) }}</span></li>{% endfor %}
+      </ol>
+    </div>
+  </div>
+  <dl class="l-ficha">
+    {% for f in l.ficha %}<div><dt class="et">{{ t(f.et) }}</dt><dd>{{ t(f.valor) }}</dd></div>{% endfor %}
+  </dl>
+  <p class="l-nota">{{ t(l.nota) }}</p>
+</section>
+{% endmacro %}
+
+{# ═════════ Premio sin lámina propia: su entrada de experiencia y su proyecto premiado ═════════ #}
+{% macro lamina_premio(v, b) %}
+{% set x = b.x %}
+{% set p = b.proyecto %}
+<section class="lam logro {{ v }}" data-nombre="{{ b.nombre }}{{ '-celular' if v == 'm' }}">
+  <div class="l-top"><span class="et">{% if p %}{{ t(p.estado) }} · {{ t(p.nombre) }}{% else %}{{ t(x.puesto) }}{% endif %}</span><span class="et">{{ t(x.etiqueta) }} · {{ t(x.lugar) }}</span></div>
+  <div class="l-cuerpo">
+    <div>
+      <div class="l-tit"><span class="l-meds">{% for m in x.logos %}<img src="{{ logos[m].src }}" alt="">{% endfor %}</span><h2>{{ b.titulo }}</h2></div>
+      {% if b.organiza %}<p class="l-equipo">{{ b.organiza }}</p>{% endif %}
+      <p class="l-prop">{{ t(x.puntos[0]) }}</p>
+    </div>
+    <div class="l-der">
+      <div class="et">{{ t(s.ui.ficha.distinciones) }}</div>
+      <ul class="pts">
+        {% for q in x.puntos[1:] %}<li>{{ t(q) }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% if p %}
+  <dl class="l-ficha l-ficha--proy">
+    <div><dt class="et">{{ t(s.ui.proyecto) }}</dt><dd>{{ p.codigo }} · {{ t(p.nombre) }}</dd></div>
+    <div><dt class="et">{{ t(s.ui.ficha.demuestra) }}</dt><dd>{{ t(p.demuestra)|pegar }}</dd></div>
+    <div><dt class="et">{{ t(s.ui.ficha.tecnologias) }}</dt><dd>{{ p.tecnologias|map("t")|join(", ") }}</dd></div>
+  </dl>
+  {% endif %}
+</section>
+{% endmacro %}
+
+{# ═════════ Roles ═════════ #}
+{% macro roles(v) %}
+<section class="lam roles {{ v }}" data-nombre="roles{{ '-celular' if v == 'm' }}">
+  <div class="r-rej">
+    {% for r in s.roles %}
+    <article class="rol{{ ' rol--dest' if loop.first }}">
+      <div class="rol__cab"><span class="et">{{ r.codigo }}</span><span class="evid"><span class="et">{{ t(s.ui.evidencia) }}</span>{% for e in r.evidencia %}<i class="chip">{{ e }}</i>{% endfor %}{% for x in r.evidencia_extra|default([]) %}<i class="chip">{{ t(x.texto) }}</i>{% endfor %}</span></div>
+      <h3>{{ t(r.titulo) }}</h3>
+      <p>{{ t(r.texto) }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="como">{{ t(s.como_trabajo) }}</p>
+</section>
+{% endmacro %}
+
+{# ═════════ Proyectos ═════════ #}
+{% macro proyectos(v) %}
+<section class="lam proy {{ v }}" data-nombre="proyectos{{ '-celular' if v == 'm' }}">
+  <div class="p-rej">
+    {% for p in s.proyectos %}
+    <article class="tar">
+      <span class="et">{{ p.codigo }} · {% for c in p.categorias %}{{ t(s.categorias[c].fig) }}{{ " · " if not loop.last }}{% endfor %}</span>
+      <div class="tar__tit"><h3>{{ t(p.nombre) }}</h3><span class="estado">{{ t(p.estado) }}</span></div>
+      <p class="tar__sub">{{ t(p.subtitulo)|pegar }}</p>
+      {% if p.distinciones is defined %}
+      <div class="tar__premios">{% for d in p.distinciones.premios %}<div><img src="{{ logos[d.medalla].src }}" alt=""><b>{{ t(d.titulo) }}</b></div>{% endfor %}</div>
+      {% else %}
+      <div class="tar__cifras">{% for c in p.cifras %}<div><b>{{ t(c.valor) }}</b><span>{{ t(c.texto) }}</span></div>{% endfor %}</div>
+      {% endif %}
+      {% if not p.enlaces %}<p class="tar__priv">{{ t(s.ui.privado) }}</p>{% endif %}
+      <div class="tar__tec">{% for x in p.tecnologias %}<i class="chip">{{ t(x) }}</i>{% endfor %}</div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endmacro %}
+
+{{ portada('d') }}
+{{ portada('m') }}
+{% if logro %}
+{{ lamina_logro('d') }}
+{{ lamina_logro('m') }}
+{% endif %}
+{% for b in logros if not b.rico %}
+{{ lamina_premio('d', b) }}
+{{ lamina_premio('m', b) }}
+{% endfor %}
+{{ roles('d') }}
+{{ roles('m') }}
+{{ proyectos('d') }}
+{{ proyectos('m') }}
+
+<div class="botones">
+  {% for b in botones %}
+  <span class="boton{{ ' boton--p' if b.principal }}" data-nombre="boton-{{ b.clave }}">{{ b.texto }}</span>
+  {% endfor %}
+</div>
+
+<div class="fichas">
+  {% for f in fichas %}
+  <div class="ficha" data-nombre="logo-{{ f.clave }}">{% for l in f.logos %}<img src="{{ logos[l].src }}" width="{{ logos[l].ancho }}" height="{{ logos[l].alto }}" alt="">{% endfor %}</div>
+  {% endfor %}
+</div>
+
+</body>
+</html>

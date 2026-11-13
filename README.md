@@ -1,80 +1,47 @@
 <!-- Generado por scripts/generar_readme.py desde data/perfil.yml del portafolio. No lo edites a mano: cambia perfil.yml y vuelve a generar. -->
 
-<a href="https://jose2501106-ia.github.io/"><img src="assets/encabezado.webp" width="100%" alt="JHM · José Hugo Meza"></a>
+<p><a href="https://jose2501106-ia.github.io/"><picture>
+  <source media="(max-width: 767px)" srcset="assets/laminas/portada-celular.webp">
+  <img src="assets/laminas/portada.webp" width="100%" alt="JHM · José Hugo Meza. Desarrollador de IA y automatización. IA aplicada a datos públicos y transparencia legislativa. Python, datos y modelos de lenguaje · Estudiante de Ing. en IA e Industrial. v7 pipeline de auditoría corriendo en producción (P-03 · Fuente: Empresa de distribución); 8 herramientas en un agente de IA con datos oficiales (P-01 · Fuente: Repositorio de AgenteMX); 10k+ votos individuales de diputados en la base de ese agente (P-01 · Fuente: SITL, Cámara de Diputados); 2 premios en Goya Hack 2026 · UNAM: 2.º Track Pollar y 3.er Track Contenido (P-04 · Fuente: Goya Hack 2026). 1.er lugar en equipo · Laboratorio de Futuros · Chilangatón 2026 · SECTEI y SEDECO, Ciudad de México; 2.º lugar Track Pollar · 3.er lugar Track Contenido · Goya Hack 2026 · CriptoUNAM × Facultad de Ingeniería, UNAM. Estudio: Ing. en IA (Hybridge) · Ing. Industrial (UVEG); Hoy: Automatización para una empresa de distribución; Disponibilidad: Prácticas profesionales · modalidad mixta; Ubicación: Ciudad de México.">
+</picture></a></p>
 
-<p align="center">
-  <sub>DESARROLLADOR DE IA Y AUTOMATIZACIÓN</sub><br>
-  <b>IA aplicada a datos públicos y transparencia legislativa.</b><br>
-  Python, datos y modelos de lenguaje · Estudiante de Ing. en IA e Industrial
-</p>
-
-<p align="center">
-  <a href="https://jose2501106-ia.github.io/"><b>Portafolio</b></a> ·
-  <a href="https://jose2501106-ia.github.io/en/">English</a> ·
-  <a href="https://www.linkedin.com/in/josehugomeza-ai/">LinkedIn</a> ·
-  <a href="https://jose2501106-ia.github.io/cv/jose-hugo-meza-cv-es.pdf">CV (PDF)</a> ·
-  <a href="mailto:jose2501106@hybridge.education">jose2501106@hybridge.education</a> ·
-  Ciudad de México, México
-</p>
+<p align="center"><a href="https://jose2501106-ia.github.io/"><img src="assets/botones/portafolio.webp" height="40" alt="Portafolio"></a>&nbsp;
+<a href="https://jose2501106-ia.github.io/en/"><img src="assets/botones/english.webp" height="40" alt="English"></a>&nbsp;
+<a href="https://www.linkedin.com/in/josehugomeza-ai/"><img src="assets/botones/linkedin.webp" height="40" alt="LinkedIn"></a>&nbsp;
+<a href="https://jose2501106-ia.github.io/cv/jose-hugo-meza-cv-es.pdf"><img src="assets/botones/cv.webp" height="40" alt="CV (PDF)"></a>&nbsp;
+<a href="mailto:jose2501106@hybridge.education"><img src="assets/botones/correo.webp" height="40" alt="Correo"></a></p>
 
 Entré a una empresa de distribución como auxiliar administrativo y a los tres meses quedé al frente de su bodega. Hoy, como desarrollador independiente, la apoyo con automatizaciones que se usan todos los días y desarrollo sus primeras soluciones de IA, mientras estudio dos ingenierías: Inteligencia Artificial e Industrial.
 
-<table>
-<tr><th scope="row" align="right" valign="top">v7</th><td valign="top" width="100%">pipeline de auditoría corriendo en producción<br><sub><code>P-03</code> · Fuente: Empresa de distribución</sub></td></tr>
-<tr><th scope="row" align="right" valign="top">8</th><td valign="top" width="100%">herramientas en un agente de IA con datos oficiales<br><sub><code>P-01</code> · Fuente: <a href="https://github.com/jose2501106-IA/agente-legislativo-mx">Repositorio de AgenteMX</a></sub></td></tr>
-<tr><th scope="row" align="right" valign="top">10k+</th><td valign="top" width="100%">votos individuales de diputados en la base de ese agente<br><sub><code>P-01</code> · Fuente: SITL, Cámara de Diputados</sub></td></tr>
-<tr><th scope="row" align="right" valign="top">2</th><td valign="top" width="100%">premios en Goya Hack 2026 · UNAM: 2.º Track Pollar y 3.er Track Contenido<br><sub><code>P-04</code> · Fuente: Goya Hack 2026</sub></td></tr>
-</table>
+<p><picture>
+  <source media="(max-width: 767px)" srcset="assets/laminas/logro-celular.webp">
+  <img src="assets/laminas/logro.webp" width="100%" alt="1.er lugar en equipo · Laboratorio de Futuros: Chilangatón 2026. OCT 2026 · CDMX · COYOACÁN. En equipo con La Chilangonería del futuro. La propuesta del equipo: movilidad para la CDMX y su zona metropolitana al 2040, con lente de cuidados y periferias. Metodología de estudios de futuros · la aprendí de mis compañeras especialistas: 34 fuerzas de cambio · con fuente · STEEP, Matriz · impacto × incertidumbre, 3 escenarios al 2040 · Colapso · Inercial · Transformación, 11 metas · medibles. Mi rol: Análisis de datos e investigación; Lo que más me llevo: Trabajo en equipo, confianza y comunicación; Fecha: 25 de octubre de 2026. Investigación con apoyo de IA (Claude); cada cifra con fuente y revisión humana.">
+</picture></p>
 
-## 1.er lugar en equipo · Laboratorio de Futuros: Chilangatón 2026
+<p align="right"><sub><a href="https://luma.com/j55anly0">Laboratorio de Futuros · Chilangatón 2026 · Ver convocatoria →</a> · <a href="https://jose2501106-ia.github.io/#chilangaton">Ver en el portafolio →</a></sub></p>
 
-<sub>OCT 2026 · CDMX · COYOACÁN</sub>
+<p><picture>
+  <source media="(max-width: 767px)" srcset="assets/laminas/logro-goya-hack-2026-celular.webp">
+  <img src="assets/laminas/logro-goya-hack-2026.webp" width="100%" alt="2.º lugar Track Pollar · 3.er lugar Track Contenido: Goya Hack 2026 · CriptoUNAM × Facultad de Ingeniería, UNAM. SEP 2026 · UNAM · FI. Dos premios con Cuentas Claras, uno de los 12 proyectos finalistas: bitácora de fiado cofirmada con un contrato inteligente en Stellar, presentada en un pitch de 3 minutos. Segundo lugar del Track Pollar, patrocinado por Pollar (infraestructura de wallets y pagos sobre Stellar). Tercer lugar del Track Contenido. Proyecto: P-04 Cuentas Claras. Demuestra: Contratos inteligentes · diseño de producto · pitch de 3 minutos. Tecnologías: Stellar, Soroban · Rust, JavaScript, Node.js.">
+</picture></p>
 
-**En equipo con La Chilangonería del futuro.** La propuesta del equipo: movilidad para la CDMX y su zona metropolitana al 2040, con lente de cuidados y periferias.
-
-<table>
-<tr><th scope="row" align="left" valign="top" width="34%">Metodología de estudios de futuros · la aprendí de mis compañeras especialistas</th><td valign="top"><b>34 fuerzas de cambio</b> · con fuente · STEEP<br><b>Matriz</b> · impacto × incertidumbre<br><b>3 escenarios al 2040</b> · Colapso · Inercial · Transformación<br><b>11 metas</b> · medibles</td></tr>
-<tr><th scope="row" align="left" valign="top">Mi rol</th><td valign="top">Análisis de datos e investigación</td></tr>
-<tr><th scope="row" align="left" valign="top">Lo que más me llevo</th><td valign="top">Trabajo en equipo, confianza y comunicación</td></tr>
-<tr><th scope="row" align="left" valign="top">Fecha</th><td valign="top">25 de octubre de 2026</td></tr>
-</table>
-
-<sub>Investigación con apoyo de IA (Claude); cada cifra con fuente y revisión humana. · <a href="https://luma.com/j55anly0">Laboratorio de Futuros · Chilangatón 2026 · Ver convocatoria →</a></sub>
+<p align="right"><sub><a href="https://github.com/jose2501106-IA/goyahack_cuentas-claras">P-04 Cuentas Claras · Ver repositorio →</a></sub></p>
 
 ## Lo que hago, con evidencia
 
-<table>
-<tr><th scope="row" align="left" valign="top" width="30%"><code>R-05</code><br>Investigación con datos públicos</th><td valign="top">Reúno, limpio y analizo información pública, sobre todo votaciones nominales de la Cámara de Diputados, y la presento con su fuente. En el Laboratorio de Futuros de Chilangatón 2026 mi equipo obtuvo el primer lugar; mi rol fue el análisis de datos y la investigación, con apoyo de IA (Claude) y revisión humana de cada cifra.<br><sub>EVIDENCIA:</sub> <code>P-01</code> · <a href="https://jose2501106-ia.github.io/#chilangaton">Chilangatón 2026</a></td></tr>
-<tr><th scope="row" align="left" valign="top" width="30%"><code>R-01</code><br>IA y agentes</th><td valign="top">Agentes con herramientas e integración de modelos de lenguaje (Claude API), del prototipo a la herramienta funcional.<br><sub>EVIDENCIA:</sub> <code>P-01</code> <code>P-02</code> </td></tr>
-<tr><th scope="row" align="left" valign="top" width="30%"><code>R-02</code><br>Automatización de procesos</th><td valign="top">Automatizo procesos operativos con Python y Apps Script, de la captura de datos a la auditoría diaria.<br><sub>EVIDENCIA:</sub> <code>P-03</code> </td></tr>
-<tr><th scope="row" align="left" valign="top" width="30%"><code>R-03</code><br>Mejora continua / Lean</th><td valign="top">Auditoría diaria de la operación del almacén, mejorada versión tras versión hasta la v7; formación en Lean Management (Lean Six Sigma Institute).<br><sub>EVIDENCIA:</sub> <code>P-03</code> </td></tr>
-<tr><th scope="row" align="left" valign="top" width="30%"><code>R-04</code><br>Análisis de datos</th><td valign="top">Limpieza y análisis con Pandas, y tableros para decidir con números.<br><sub>EVIDENCIA:</sub> <code>P-01</code> <code>P-03</code> </td></tr>
-</table>
-
-<code>// Cómo trabajo: diagnóstico → diseño → construcción con IA y pruebas en 3 capas → control con DMAIC.</code>
+<p><picture>
+  <source media="(max-width: 767px)" srcset="assets/laminas/roles-celular.webp">
+  <img src="assets/laminas/roles.webp" width="100%" alt="Lo que hago, con evidencia. R-05 Investigación con datos públicos: Reúno, limpio y analizo información pública, sobre todo votaciones nominales de la Cámara de Diputados, y la presento con su fuente. En el Laboratorio de Futuros de Chilangatón 2026 mi equipo obtuvo el primer lugar; mi rol fue el análisis de datos y la investigación, con apoyo de IA (Claude) y revisión humana de cada cifra. Evidencia: P-01, Chilangatón 2026. R-01 IA y agentes: Agentes con herramientas e integración de modelos de lenguaje (Claude API), del prototipo a la herramienta funcional. Evidencia: P-01, P-02. R-02 Automatización de procesos: Automatizo procesos operativos con Python y Apps Script, de la captura de datos a la auditoría diaria. Evidencia: P-03. R-03 Mejora continua / Lean: Auditoría diaria de la operación del almacén, mejorada versión tras versión hasta la v7; formación en Lean Management (Lean Six Sigma Institute). Evidencia: P-03. R-04 Análisis de datos: Limpieza y análisis con Pandas, y tableros para decidir con números. Evidencia: P-01, P-03. Cómo trabajo: diagnóstico → diseño → construcción con IA y pruebas en 3 capas → control con DMAIC.">
+</picture></p>
 
 ## Proyectos que lo demuestran
 
-<table>
-<tr>
-<td valign="top" width="46%"><sub><code>P-01</code> · IA Y AGENTES · DATOS</sub><br><b>AgenteMX</b><br>Agente de IA para transparencia legislativa<br><sub><a href="https://github.com/jose2501106-IA/agente-legislativo-mx">Ver repositorio →</a></sub></td>
-<td valign="top"><b>FUNCIONAL</b><br><b>8</b> herramientas del agente<br><b>10k+</b> votos individuales<br><b>7</b> partidos cubiertos<br><code>Claude API</code> <code>SQLite</code> <code>Pandas</code> <code>BeautifulSoup</code> <code>Streamlit</code></td>
-</tr>
-<tr>
-<td valign="top" width="46%"><sub><code>P-02</code> · IA Y AGENTES · PRODUCTO</sub><br><b>Neurona Artificial</b><br>Curso abierto para entender la IA por dentro<br><sub><a href="https://jose2501106-ia.github.io/NeuronaArtificial/">Ver curso →</a> · <a href="https://github.com/jose2501106-IA/NeuronaArtificial">Ver repositorio →</a></sub></td>
-<td valign="top"><b>EN CONSTRUCCIÓN</b><br><b>2</b> lecciones publicadas<br><b>7</b> lecciones en camino<br><code>HTML</code> <code>CSS</code> <code>JavaScript</code> <code>sistema de diseño propio</code></td>
-</tr>
-<tr>
-<td valign="top" width="46%"><sub><code>P-03</code> · AUTOMATIZACIÓN · DATOS</sub><br><b>Pipeline de auditoría</b><br>Empresa de distribución · CDMX<br><sub>Repositorio privado</sub></td>
-<td valign="top"><b>EN PRODUCCIÓN</b><br><b>v7</b> versión en producción<br><code>Python</code> <code>Apps Script</code> <code>Google Sheets</code></td>
-</tr>
-<tr>
-<td valign="top" width="46%"><sub><code>P-04</code> · PRODUCTO</sub><br><b>Cuentas Claras</b><br>Bitácora de fiado cofirmada · Goya Hack 2026<br><sub><a href="https://github.com/jose2501106-IA/goyahack_cuentas-claras">Ver repositorio →</a></sub></td>
-<td valign="top"><b>2 PREMIOS</b><br>2.º LUGAR · TRACK POLLAR<br>3.er LUGAR · TRACK CONTENIDO<br><code>Stellar</code> <code>Soroban · Rust</code> <code>JavaScript</code> <code>Node.js</code></td>
-</tr>
-</table>
+<p><picture>
+  <source media="(max-width: 767px)" srcset="assets/laminas/proyectos-celular.webp">
+  <img src="assets/laminas/proyectos.webp" width="100%" alt="Proyectos que lo demuestran. P-01 · IA Y AGENTES · DATOS · FUNCIONAL. AgenteMX: Agente de IA para transparencia legislativa. 8 herramientas del agente; 10k+ votos individuales; 7 partidos cubiertos. Claude API, SQLite, Pandas, BeautifulSoup, Streamlit. P-02 · IA Y AGENTES · PRODUCTO · EN CONSTRUCCIÓN. Neurona Artificial: Curso abierto para entender la IA por dentro. 2 lecciones publicadas; 7 lecciones en camino. HTML, CSS, JavaScript, sistema de diseño propio. P-03 · AUTOMATIZACIÓN · DATOS · EN PRODUCCIÓN. Pipeline de auditoría: Empresa de distribución · CDMX. v7 versión en producción. Python, Apps Script, Google Sheets. Repositorio privado. P-04 · PRODUCTO · 2 PREMIOS. Cuentas Claras: Bitácora de fiado cofirmada · Goya Hack 2026. 2.º LUGAR · TRACK POLLAR; 3.er LUGAR · TRACK CONTENIDO. Stellar, Soroban · Rust, JavaScript, Node.js.">
+</picture></p>
 
-<p align="right"><sub><a href="https://jose2501106-ia.github.io/#proyectos">Ver en el portafolio →</a></sub></p>
+<p align="right"><sub><code>P-01</code> <a href="https://github.com/jose2501106-IA/agente-legislativo-mx">Ver repositorio →</a> · <code>P-02</code> <a href="https://jose2501106-ia.github.io/NeuronaArtificial/">Ver curso →</a> <a href="https://github.com/jose2501106-IA/NeuronaArtificial">Ver repositorio →</a> · <code>P-03</code> Repositorio privado · <code>P-04</code> <a href="https://github.com/jose2501106-IA/goyahack_cuentas-claras">Ver repositorio →</a> · <a href="https://jose2501106-ia.github.io/#proyectos">Ver en el portafolio →</a></sub></p>
 
 ## Herramientas
 
@@ -137,13 +104,11 @@ Entré a una empresa de distribución como auxiliar administrativo y a los tres 
 
 Busco prácticas profesionales en IA aplicada al sector público, en modalidad mixta (presencial y remota). Escríbeme por correo o por LinkedIn.
 
-<p>
-<b>CORREO</b> · <a href="mailto:jose2501106@hybridge.education">jose2501106@hybridge.education</a><br>
-<b>LINKEDIN</b> · <a href="https://www.linkedin.com/in/josehugomeza-ai/">in/josehugomeza-ai</a><br>
-<b>CV</b> · <a href="https://jose2501106-ia.github.io/cv/jose-hugo-meza-cv-es.pdf">Descargar CV (PDF)</a><br>
-<b>PORTAFOLIO</b> · <a href="https://jose2501106-ia.github.io/#contacto">jose2501106-ia.github.io</a><br>
-<b>UBICACIÓN</b> · Ciudad de México, México
-</p>
+<p><a href="mailto:jose2501106@hybridge.education"><img src="assets/botones/escribir-correo.webp" height="40" alt="Escribir correo"></a>&nbsp;
+<a href="https://www.linkedin.com/in/josehugomeza-ai/"><img src="assets/botones/ir-a-linkedin.webp" height="40" alt="Ir a LinkedIn"></a>&nbsp;
+<a href="https://jose2501106-ia.github.io/cv/jose-hugo-meza-cv-es.pdf"><img src="assets/botones/descargar-cv.webp" height="40" alt="Descargar CV (PDF)"></a></p>
+
+<p><a href="mailto:jose2501106@hybridge.education">jose2501106@hybridge.education</a> · <a href="https://www.linkedin.com/in/josehugomeza-ai/">in/josehugomeza-ai</a> · <a href="https://jose2501106-ia.github.io/#contacto">jose2501106-ia.github.io</a> · Ciudad de México, México</p>
 
 <p align="center"><i>“Ingeniero industrial en formación, developer por curiosidad, operador por necesidad.”</i></p>
 
