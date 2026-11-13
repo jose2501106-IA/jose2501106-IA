@@ -126,13 +126,14 @@
 
 {{ t(s.seccion_contacto.texto) }}
 
-<table>
-<tr><th scope="row" align="left">{{ t(s.seccion_contacto.filas.correo) }}</th><td><a href="mailto:{{ s.contacto.correo }}">{{ s.contacto.correo|replace("@", "@<wbr>") }}</a></td></tr>
-<tr><th scope="row" align="left">{{ t(s.seccion_contacto.filas.linkedin) }}</th><td><a href="{{ s.contacto.linkedin_url }}">{{ s.contacto.linkedin_txt }}</a></td></tr>
-<tr><th scope="row" align="left">{{ t(s.seccion_contacto.filas.cv) }}</th><td><a href="{{ s.sitio.url }}{{ t(s.cv.archivo) }}">{{ t(s.cv.boton) }}</a></td></tr>
-<tr><th scope="row" align="left">{{ t(s.ui.marca_sub) }}</th><td><a href="{{ s.sitio.url }}#contacto">{{ dominio }}</a></td></tr>
-<tr><th scope="row" align="left">{{ t(s.seccion_contacto.filas.ubicacion) }}</th><td>{{ t(s.contacto.ubicacion) }}</td></tr>
-</table>
+{# En lista y no en tabla: GitHub no deja partir el correo dentro de una celda y en celular la tabla se saldría de la pantalla. #}
+<p>
+<b>{{ t(s.seccion_contacto.filas.correo) }}</b> · <a href="mailto:{{ s.contacto.correo }}">{{ s.contacto.correo }}</a><br>
+<b>{{ t(s.seccion_contacto.filas.linkedin) }}</b> · <a href="{{ s.contacto.linkedin_url }}">{{ s.contacto.linkedin_txt }}</a><br>
+<b>{{ t(s.seccion_contacto.filas.cv) }}</b> · <a href="{{ s.sitio.url }}{{ t(s.cv.archivo) }}">{{ t(s.cv.boton) }}</a><br>
+<b>{{ t(s.ui.marca_sub) }}</b> · <a href="{{ s.sitio.url }}#contacto">{{ dominio }}</a><br>
+<b>{{ t(s.seccion_contacto.filas.ubicacion) }}</b> · {{ t(s.contacto.ubicacion) }}
+</p>
 
 <p align="center"><i>{{ t(s.pie.frase) }}</i></p>
 

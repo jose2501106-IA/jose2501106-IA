@@ -137,13 +137,13 @@ Entré a una empresa de distribución como auxiliar administrativo y a los tres 
 
 Busco prácticas profesionales en IA aplicada al sector público, en modalidad mixta (presencial y remota). Escríbeme por correo o por LinkedIn.
 
-<table>
-<tr><th scope="row" align="left">CORREO</th><td><a href="mailto:jose2501106@hybridge.education">jose2501106@<wbr>hybridge.education</a></td></tr>
-<tr><th scope="row" align="left">LINKEDIN</th><td><a href="https://www.linkedin.com/in/josehugomeza-ai/">in/josehugomeza-ai</a></td></tr>
-<tr><th scope="row" align="left">CV</th><td><a href="https://jose2501106-ia.github.io/cv/jose-hugo-meza-cv-es.pdf">Descargar CV (PDF)</a></td></tr>
-<tr><th scope="row" align="left">PORTAFOLIO</th><td><a href="https://jose2501106-ia.github.io/#contacto">jose2501106-ia.github.io</a></td></tr>
-<tr><th scope="row" align="left">UBICACIÓN</th><td>Ciudad de México, México</td></tr>
-</table>
+<p>
+<b>CORREO</b> · <a href="mailto:jose2501106@hybridge.education">jose2501106@hybridge.education</a><br>
+<b>LINKEDIN</b> · <a href="https://www.linkedin.com/in/josehugomeza-ai/">in/josehugomeza-ai</a><br>
+<b>CV</b> · <a href="https://jose2501106-ia.github.io/cv/jose-hugo-meza-cv-es.pdf">Descargar CV (PDF)</a><br>
+<b>PORTAFOLIO</b> · <a href="https://jose2501106-ia.github.io/#contacto">jose2501106-ia.github.io</a><br>
+<b>UBICACIÓN</b> · Ciudad de México, México
+</p>
 
 <p align="center"><i>“Ingeniero industrial en formación, developer por curiosidad, operador por necesidad.”</i></p>
 
